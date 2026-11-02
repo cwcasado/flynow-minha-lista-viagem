@@ -1,0 +1,1116 @@
+{
+  "destinos": [
+    {
+      "id": "95089",
+      "nome": "Parque Nacional da Serra da Capivara",
+      "descricao": "Patrimônio da Humanidade no Piauí com mais de 30.000 pinturas rupestres.",
+      "url": "https://pt.wikipedia.org/wiki/Parque_Nacional_da_Serra_da_Capivara",
+      "categorias": [
+        "Natureza",
+        "Histórico",
+        "Monumentos",
+        "Gastronomia",
+        "Aventura",
+        "Ponto turístico"
+      ],
+      "fotos": [
+        {
+          "arquivo": "File:Parque nacional serra da capivara-THIAGO CAMPI-03.jpg",
+          "titulo": "Paisagem da Serra da Capivara",
+          "categoria": "Natureza"
+        },
+        {
+          "arquivo": "File:Pinturas Rupestres - Serra da Capivara I.jpg",
+          "titulo": "Pinturas rupestres",
+          "categoria": "Monumentos"
+        },
+        {
+          "arquivo": "File:Boqueirão da Pedra Furada - Serra da Capivara.jpg",
+          "titulo": "Boqueirão da Pedra Furada",
+          "categoria": "Ponto turístico"
+        },
+        {
+          "arquivo": "File:Pinturas Rupestres Serra da Capivara Piauí.jpg",
+          "titulo": "Painel de pinturas rupestres",
+          "categoria": "Histórico"
+        },
+        {
+          "arquivo": "File:Baixão das Andorinhas, Parque Nacional Serra da Capivara (Piauí).jpg",
+          "titulo": "Baixão das Andorinhas",
+          "categoria": "Aventura"
+        },
+        {
+          "arquivo": "File:Baião de dois com linguiça.jpg",
+          "titulo": "Baião de dois",
+          "categoria": "Gastronomia"
+        }
+      ]
+    },
+    {
+      "id": "1436936",
+      "nome": "Delta do Parnaíba",
+      "descricao": "Único delta em mar aberto das Américas — 73 ilhas, manguezais e dunas.",
+      "url": "https://pt.wikipedia.org/wiki/Delta_do_Parna%C3%ADba",
+      "categorias": [
+        "Natureza",
+        "Praias",
+        "Gastronomia",
+        "Cultura",
+        "Aventura",
+        "Ponto turístico"
+      ],
+      "fotos": [
+        {
+          "arquivo": "File:ChicoRasta RevoadaDosGuaras DeltaDoParnaiba Parnaiba PI (40822581422).jpg",
+          "titulo": "Revoada de guarás",
+          "categoria": "Natureza"
+        },
+        {
+          "arquivo": "File:Área de Proteção Ambiental Delta do Parnaiba THIAGO AMARAL (2).jpg",
+          "titulo": "Praias do delta",
+          "categoria": "Praias"
+        },
+        {
+          "arquivo": "File:Delta do Parnaiba 2019.jpg",
+          "titulo": "Dunas do delta",
+          "categoria": "Ponto turístico"
+        },
+        {
+          "arquivo": "File:Barco de Pesca - Praia do Coqueiro.jpg",
+          "titulo": "Barco de pesca",
+          "categoria": "Aventura"
+        },
+        {
+          "arquivo": "File:ChicoRasta Melancieiras DeltaDoParnaiba Parnaiba PI.jpg",
+          "titulo": "Melancieiras",
+          "categoria": "Cultura"
+        },
+        {
+          "arquivo": "File:Patas de caranguejo no molho de coco.jpg",
+          "titulo": "Caranguejo no molho de coco",
+          "categoria": "Gastronomia"
+        }
+      ]
+    },
+    {
+      "id": "288272",
+      "nome": "Cânion Itaimbezinho",
+      "descricao": "Fendas de 720 m de altura no Parque Aparados da Serra (RS/SC).",
+      "url": "https://pt.wikipedia.org/wiki/C%C3%A2nion_Itaimbezinho",
+      "categorias": [
+        "Natureza",
+        "Monumentos",
+        "Gastronomia",
+        "Aventura",
+        "Ponto turístico"
+      ],
+      "fotos": [
+        {
+          "arquivo": "File:Canyon do Itaimbézinho em Camabará do Sul - RS.JPG",
+          "titulo": "Cânion Itaimbezinho",
+          "categoria": "Natureza"
+        },
+        {
+          "arquivo": "File:Cânion do Itaimbezinho no mirante do Cotovelo.jpg",
+          "titulo": "Mirante do Cotovelo",
+          "categoria": "Ponto turístico"
+        },
+        {
+          "arquivo": "File:Cânion Itaimbezinho, Trilha do Rio do Boi (3).jpg",
+          "titulo": "Trilha do Rio do Boi",
+          "categoria": "Aventura"
+        },
+        {
+          "arquivo": "File:Cachoeira das Andorinhas no Cânion do Itaimbezinho.jpg",
+          "titulo": "Cachoeira das Andorinhas",
+          "categoria": "Natureza"
+        },
+        {
+          "arquivo": "File:Encontro de paredões, Canyon Itaimbézinho, Cambará do Sul - RS.JPG",
+          "titulo": "Encontro de paredões",
+          "categoria": "Monumentos"
+        },
+        {
+          "arquivo": "File:Brazilian churrasco.jpg",
+          "titulo": "Churrasco gaúcho",
+          "categoria": "Gastronomia"
+        }
+      ]
+    },
+    {
+      "id": "394911",
+      "nome": "Jalapão",
+      "descricao": "Oásis no Tocantins: dunas douradas, fervedouros e chapadas.",
+      "url": "https://pt.wikipedia.org/wiki/Jalap%C3%A3o",
+      "categorias": [
+        "Natureza",
+        "Gastronomia",
+        "Cultura",
+        "Aventura"
+      ],
+      "fotos": [
+        {
+          "arquivo": "File:Cachoeira da Velha ..jpg",
+          "titulo": "Cachoeira da Velha",
+          "categoria": "Natureza"
+        },
+        {
+          "arquivo": "File:Dunas no Jalapão.jpg",
+          "titulo": "Dunas do Jalapão",
+          "categoria": "Natureza"
+        },
+        {
+          "arquivo": "File:Fervedouro dos Buritis - Parque Estadual do Jalapão.jpg",
+          "titulo": "Fervedouro dos Buritis",
+          "categoria": "Aventura"
+        },
+        {
+          "arquivo": "File:Artesanato capim dourado.jpg",
+          "titulo": "Artesanato em capim dourado",
+          "categoria": "Cultura"
+        },
+        {
+          "arquivo": "File:Araras Azuis.jpg",
+          "titulo": "Araras-azuis",
+          "categoria": "Natureza"
+        },
+        {
+          "arquivo": "File:Arroz com pequi.jpg",
+          "titulo": "Arroz com pequi",
+          "categoria": "Gastronomia"
+        }
+      ]
+    },
+    {
+      "id": "1145904",
+      "nome": "Parque Nacional Marinho dos Abrolhos",
+      "descricao": "Primeiro parque marinho do Brasil (BA) — recifes, baleias-jubarte e ilhas vulcânicas.",
+      "url": "https://pt.wikipedia.org/wiki/Parque_Nacional_Marinho_dos_Abrolhos",
+      "categorias": [
+        "Natureza",
+        "Praias",
+        "Monumentos",
+        "Gastronomia",
+        "Ponto turístico"
+      ],
+      "fotos": [
+        {
+          "arquivo": "File:Abrolhos Marine National ParkRobertoCostaPinto10.jpg",
+          "titulo": "Parque Nacional Marinho dos Abrolhos",
+          "categoria": "Natureza"
+        },
+        {
+          "arquivo": "File:Farol de Abrolhos.jpg",
+          "titulo": "Farol de Abrolhos",
+          "categoria": "Monumentos"
+        },
+        {
+          "arquivo": "File:Baleia jubarte, Parque Nacional Marinho dos Abrolhos.JPG",
+          "titulo": "Baleia-jubarte",
+          "categoria": "Natureza"
+        },
+        {
+          "arquivo": "File:Ilha de Santa Bárbara vista da Ilha Siriba.JPG",
+          "titulo": "Ilha de Santa Bárbara",
+          "categoria": "Praias"
+        },
+        {
+          "arquivo": "File:Arquipélago dos Abrolhos. Costa das Baleias. Foto Tatiana Azeviche Setur (25535574335).jpg",
+          "titulo": "Costa das Baleias",
+          "categoria": "Ponto turístico"
+        },
+        {
+          "arquivo": "File:Moqueca- Ilha de Maré. Foto Tatiana Azeviche Setur (31969364150).jpg",
+          "titulo": "Moqueca baiana",
+          "categoria": "Gastronomia"
+        }
+      ]
+    },
+    {
+      "id": "46289",
+      "nome": "São Luís",
+      "descricao": "Centro histórico com 3.500 sobrados de azulejos portugueses — reggae e marés.",
+      "url": "https://pt.wikipedia.org/wiki/S%C3%A3o_Lu%C3%ADs",
+      "categorias": [
+        "Praias",
+        "Histórico",
+        "Monumentos",
+        "Gastronomia",
+        "Cultura",
+        "Ponto turístico"
+      ],
+      "fotos": [
+        {
+          "arquivo": "File:Catedral de São Luís do Maranhão - São Luís - 20230909111847.jpg",
+          "titulo": "Catedral de São Luís",
+          "categoria": "Monumentos"
+        },
+        {
+          "arquivo": "File:Azulejaria da fachada da edificação à Rua da Palma, 147 - São Luís - 20240307121222.jpg",
+          "titulo": "Azulejaria da Rua da Palma",
+          "categoria": "Histórico"
+        },
+        {
+          "arquivo": "File:Bumba-Meu-Boi de Pindaré - 0115.jpg",
+          "titulo": "Bumba-meu-boi",
+          "categoria": "Cultura"
+        },
+        {
+          "arquivo": "File:Mar2024. São Luís, Maranhão. Palácio dos Leões 01.jpg",
+          "titulo": "Palácio dos Leões",
+          "categoria": "Ponto turístico"
+        },
+        {
+          "arquivo": "File:DouglasJunior Praia de São Marcos São Luis MA (25992562807).jpg",
+          "titulo": "Praia de São Marcos",
+          "categoria": "Praias"
+        },
+        {
+          "arquivo": "File:O preparo tradicional do peixe na Raposa (MA).jpg",
+          "titulo": "Peixe na Raposa",
+          "categoria": "Gastronomia"
+        }
+      ]
+    },
+    {
+      "id": "3214898",
+      "nome": "Paraty",
+      "descricao": "Cidade colonial RJ preservada — ruas de pedra, ouro, cachaça e a Flip literária.",
+      "url": "https://pt.wikipedia.org/wiki/Paraty",
+      "categorias": [
+        "Praias",
+        "Histórico",
+        "Monumentos",
+        "Gastronomia",
+        "Cultura",
+        "Ponto turístico"
+      ],
+      "fotos": [
+        {
+          "arquivo": "File:Igreja Nossa Senhora das Dores, centro histórico de Paraty.jpg",
+          "titulo": "Igreja Nossa Senhora das Dores",
+          "categoria": "Monumentos"
+        },
+        {
+          "arquivo": "File:Brazil paraty narrow street.jpg",
+          "titulo": "Ruas do centro histórico",
+          "categoria": "Histórico"
+        },
+        {
+          "arquivo": "File:Rogerio Cassimiro Praia do Pontal Paraty RJ (40684890475).jpg",
+          "titulo": "Praia do Pontal",
+          "categoria": "Praias"
+        },
+        {
+          "arquivo": "File:Paraty - Rio de Janeiro (22469264995).jpg",
+          "titulo": "Passeio de barco",
+          "categoria": "Ponto turístico"
+        },
+        {
+          "arquivo": "File:Cachaça Artisanale.jpg",
+          "titulo": "Cachaça artesanal",
+          "categoria": "Gastronomia"
+        },
+        {
+          "arquivo": "File:Muddy people Paraty RJ.jpg",
+          "titulo": "Bloco da Lama",
+          "categoria": "Cultura"
+        }
+      ]
+    },
+    {
+      "id": "19032",
+      "nome": "Tiradentes (Minas Gerais)",
+      "descricao": "Barroco mineiro intacto — chafarizes, igrejas de Aleijadinho e Maria Fumaça.",
+      "url": "https://pt.wikipedia.org/wiki/Tiradentes_(Minas_Gerais)",
+      "categorias": [
+        "Histórico",
+        "Monumentos",
+        "Gastronomia",
+        "Cultura",
+        "Ponto turístico"
+      ],
+      "fotos": [
+        {
+          "arquivo": "File:Igreja Matriz de Santo Antonio - Tiradentes - MG.jpg",
+          "titulo": "Igreja Matriz de Santo Antônio",
+          "categoria": "Monumentos"
+        },
+        {
+          "arquivo": "File:Rua da Igreja Matriz em Tiradentes.jpg",
+          "titulo": "Rua da Igreja Matriz",
+          "categoria": "Histórico"
+        },
+        {
+          "arquivo": "File:A beleza da arquitetura barroca em Tiradentes MG. (8860638452).jpg",
+          "titulo": "Arquitetura barroca",
+          "categoria": "Cultura"
+        },
+        {
+          "arquivo": "File:PedroVilela Maria Fumaça Tiradentes MG (39971918495).jpg",
+          "titulo": "Maria Fumaça",
+          "categoria": "Ponto turístico"
+        },
+        {
+          "arquivo": "File:Casario Tiradentes, 2013.jpg",
+          "titulo": "Casario colonial",
+          "categoria": "Histórico"
+        },
+        {
+          "arquivo": "File:Feijão Tropeiro.jpg",
+          "titulo": "Feijão tropeiro",
+          "categoria": "Gastronomia"
+        }
+      ]
+    },
+    {
+      "id": "41565",
+      "nome": "Ilha de Marajó",
+      "descricao": "Maior ilha fluviomarinha do mundo (PA) — búfalos, cerâmica marajoara e praias.",
+      "url": "https://pt.wikipedia.org/wiki/Ilha_de_Maraj%C3%B3",
+      "categorias": [
+        "Natureza",
+        "Praias",
+        "Gastronomia",
+        "Cultura",
+        "Ponto turístico"
+      ],
+      "fotos": [
+        {
+          "arquivo": "File:UC Ilha de Marajo, Praia do Pesqueiro , Marcia Penna(7).jpg",
+          "titulo": "Praia do Pesqueiro",
+          "categoria": "Praias"
+        },
+        {
+          "arquivo": "File:UC Ilha de Marajo, Soure, Búfalo Alemão, Marcia Penna(16).jpg",
+          "titulo": "Búfalos de Marajó",
+          "categoria": "Natureza"
+        },
+        {
+          "arquivo": "File:CERAMICA MARAJOARA - panoramio.jpg",
+          "titulo": "Cerâmica marajoara",
+          "categoria": "Cultura"
+        },
+        {
+          "arquivo": "File:Ilha de Marajó Beach, Pará, Brazil.jpg",
+          "titulo": "Praia da ilha",
+          "categoria": "Ponto turístico"
+        },
+        {
+          "arquivo": "File:TiagoSilveira Acai Santarem Para (40065071065).jpg",
+          "titulo": "Açaí",
+          "categoria": "Gastronomia"
+        },
+        {
+          "arquivo": "File:Manglar Isla de Marajó.jpg",
+          "titulo": "Manguezal",
+          "categoria": "Natureza"
+        }
+      ]
+    },
+    {
+      "id": "52162",
+      "nome": "Pantanal",
+      "descricao": "Maior planície alagada do planeta — onças, jacarés e tuiuiús.",
+      "url": "https://pt.wikipedia.org/wiki/Pantanal",
+      "categorias": [
+        "Natureza",
+        "Gastronomia",
+        "Aventura",
+        "Ponto turístico"
+      ],
+      "fotos": [
+        {
+          "arquivo": "File:As montanhas da planície.jpg",
+          "titulo": "Montanhas da planície",
+          "categoria": "Natureza"
+        },
+        {
+          "arquivo": "File:Amanhecer no Rio Paraguay.jpg",
+          "titulo": "Amanhecer no Rio Paraguai",
+          "categoria": "Ponto turístico"
+        },
+        {
+          "arquivo": "File:Tuiuiu e Rio.jpg",
+          "titulo": "Tuiuiú",
+          "categoria": "Natureza"
+        },
+        {
+          "arquivo": "File:023 Yacare caiman sunbathing in Encontro das Águas State Park Photo by Giles Laurent.jpg",
+          "titulo": "Jacaré-do-pantanal",
+          "categoria": "Aventura"
+        },
+        {
+          "arquivo": "File:Jaguar (Panthera onca palustris) male Three Brothers River.JPG",
+          "titulo": "Onça-pintada",
+          "categoria": "Natureza"
+        },
+        {
+          "arquivo": "File:Arroz de Carreteiro.jpg",
+          "titulo": "Arroz de carreteiro",
+          "categoria": "Gastronomia"
+        }
+      ]
+    },
+    {
+      "id": "21545",
+      "nome": "Fernando de Noronha",
+      "descricao": "Arquipélago no Atlântico com praias de areia branca, golfinhos e trilhas.",
+      "url": "https://pt.wikipedia.org/wiki/Fernando_de_Noronha",
+      "categorias": [
+        "Natureza",
+        "Praias",
+        "Aventura",
+        "Ponto turístico"
+      ],
+      "fotos": [
+        {
+          "arquivo": "File:Arquipélago de Fernando de Noronha - Ilha dois irmãos.jpg",
+          "titulo": "Arquipélago de Fernando de Noronha",
+          "categoria": "Natureza"
+        },
+        {
+          "arquivo": "File:Fernando de Noronha-Praia do Sancho.jpg",
+          "titulo": "Praia do Sancho",
+          "categoria": "Praias"
+        },
+        {
+          "arquivo": "File:BRUNO LIMA BAIA DOS PORCOS FERNANDO DE NORONHA PE (39167052890).jpg",
+          "titulo": "Baía dos Porcos",
+          "categoria": "Aventura"
+        },
+        {
+          "arquivo": "File:BRUNO LIMA ENSEADA DOS GOLFINHOS FERNANDO DE NORONHA PE (27105023038).jpg",
+          "titulo": "Enseada dos Golfinhos",
+          "categoria": "Praias"
+        },
+        {
+          "arquivo": "File:BRUNO LIMA PALACIO DE SAO MIGUEL FERNANDO DE NORONHA PE (40934087472).jpg",
+          "titulo": "Palácio de São Miguel",
+          "categoria": "Ponto turístico"
+        },
+        {
+          "arquivo": "File:2013-08-15 - Atobá em Fernando de Noronha - Pernambuco.jpg",
+          "titulo": "Atobá-pardo",
+          "categoria": "Natureza"
+        }
+      ]
+    },
+    {
+      "id": "150576",
+      "nome": "Lençóis Maranhenses",
+      "descricao": "Dunas de areia branca e lagoas de água doce no Maranhão.",
+      "url": "https://pt.wikipedia.org/wiki/Len%C3%B3is_Maranhenses",
+      "categorias": [
+        "Natureza",
+        "Praias",
+        "Cultura",
+        "Aventura",
+        "Ponto turístico"
+      ],
+      "fotos": [
+        {
+          "arquivo": "File:28 04 2018 LENCOIS MARANHENSES Panorama1.jpg",
+          "titulo": "Panorama dos Lençóis",
+          "categoria": "Natureza"
+        },
+        {
+          "arquivo": "File:Areias nos lençois.jpg",
+          "titulo": "Dunas de areia",
+          "categoria": "Natureza"
+        },
+        {
+          "arquivo": "File:A lagoa e as dunas do Parque.jpg",
+          "titulo": "Lagoa e dunas do Parque",
+          "categoria": "Praias"
+        },
+        {
+          "arquivo": "File:Anfiteatro de areia.JPG",
+          "titulo": "Anfiteatro de areia",
+          "categoria": "Ponto turístico"
+        },
+        {
+          "arquivo": "File:Capoeira em Lençóis, na Chapada Diamantina, Bahia Brasil.jpg",
+          "titulo": "Capoeira em Lençóis",
+          "categoria": "Aventura"
+        },
+        {
+          "arquivo": "File:Casa de Pau a Pique.jpg",
+          "titulo": "Casa de pau-a-pique",
+          "categoria": "Cultura"
+        }
+      ]
+    },
+    {
+      "id": "11211",
+      "nome": "Gramado",
+      "descricao": "Serra Gaúcha com clima de altitude, Festival de Cinema e o Lago Negro.",
+      "url": "https://pt.wikipedia.org/wiki/Gramado",
+      "categorias": [
+        "Natureza",
+        "Gastronomia",
+        "Cultura",
+        "Ponto turístico"
+      ],
+      "fotos": [
+        {
+          "arquivo": "File:Lago Negro, Gramado-RS.jpg",
+          "titulo": "Lago Negro",
+          "categoria": "Natureza"
+        },
+        {
+          "arquivo": "File:Araucaria angustifolia trees in Gramado.jpg",
+          "titulo": "Araucárias de Gramado",
+          "categoria": "Natureza"
+        },
+        {
+          "arquivo": "File:Mini Mundo - Gramado - panoramio.jpg",
+          "titulo": "Mini Mundo",
+          "categoria": "Ponto turístico"
+        },
+        {
+          "arquivo": "File:Natal Luz - Gramado - panoramio.jpg",
+          "titulo": "Natal Luz",
+          "categoria": "Cultura"
+        },
+        {
+          "arquivo": "File:Churrasco Campeiro.jpg",
+          "titulo": "Churrasco campeiro",
+          "categoria": "Gastronomia"
+        },
+        {
+          "arquivo": "File:Costela no Fogo.JPG",
+          "titulo": "Costela no fogo",
+          "categoria": "Gastronomia"
+        }
+      ]
+    },
+    {
+      "id": "42117",
+      "nome": "Cataratas do Iguaçu",
+      "descricao": "275 quedas de água no Parque Nacional do Iguaçu, entre Brasil e Argentina.",
+      "url": "https://pt.wikipedia.org/wiki/Cataratas_do_Igua%C3%A7u",
+      "categorias": [
+        "Natureza",
+        "Histórico",
+        "Aventura",
+        "Ponto turístico"
+      ],
+      "fotos": [
+        {
+          "arquivo": "File:00 1826 Iguazu Falls - South America, Brazil.jpg",
+          "titulo": "Cataratas do Iguaçu",
+          "categoria": "Natureza"
+        },
+        {
+          "arquivo": "File:Parque Cataratas del Iguazú 09.jpg",
+          "titulo": "Vista panorâmica das cataratas",
+          "categoria": "Natureza"
+        },
+        {
+          "arquivo": "File:Toco toucan foz.jpg",
+          "titulo": "Toco-toucan do parque",
+          "categoria": "Natureza"
+        },
+        {
+          "arquivo": "File:2,8 km com 275 quedas em Foz de Iguaçu - Brasil. (10028910313).jpg",
+          "titulo": "Corredor das 275 quedas",
+          "categoria": "Aventura"
+        },
+        {
+          "arquivo": "File:J31 131 »tren ecologico«.jpg",
+          "titulo": "Trem turístico do Iguaçu",
+          "categoria": "Ponto turístico"
+        },
+        {
+          "arquivo": "File:00 1854 Iguazú-Wasserfälle - Südamerika.jpg",
+          "titulo": "Iguaçu em 1900",
+          "categoria": "Histórico"
+        }
+      ]
+    },
+    {
+      "id": "83255",
+      "nome": "Chapada Diamantina",
+      "descricao": "Planalto de formações rochosas na Bahia, com cânions, cachoeiras e vilas históricas.",
+      "url": "https://pt.wikipedia.org/wiki/Chapada_Diamantina",
+      "categorias": [
+        "Natureza",
+        "Histórico",
+        "Cultura",
+        "Aventura"
+      ],
+      "fotos": [
+        {
+          "arquivo": "File:Vista do Vale do Pati. Chapada Diamantina. Bahia. Brasil.jpg",
+          "titulo": "Vale do Pati",
+          "categoria": "Natureza"
+        },
+        {
+          "arquivo": "File:CACHOEIRA DO BURACÃO.jpg",
+          "titulo": "Cachoeira do Buracão",
+          "categoria": "Natureza"
+        },
+        {
+          "arquivo": "File:Floresta de Pedras.jpg",
+          "titulo": "Floresta de Pedras",
+          "categoria": "Natureza"
+        },
+        {
+          "arquivo": "File:ChDiam-teia-água-2014-05-03-1031.jpg",
+          "titulo": "Teia de água",
+          "categoria": "Aventura"
+        },
+        {
+          "arquivo": "File:Cemitério Bizantino 56.jpg",
+          "titulo": "Cemitério Bizantino",
+          "categoria": "Histórico"
+        },
+        {
+          "arquivo": "File:Biblioteca Pública Municipal Herberto Sales.jpg",
+          "titulo": "Biblioteca Pública Herberto Sales",
+          "categoria": "Cultura"
+        }
+      ]
+    },
+    {
+      "id": "8904",
+      "nome": "Manaus",
+      "descricao": "Capital do Amazonas na confluência dos rios Negro e Solimões, cercada de floresta.",
+      "url": "https://pt.wikipedia.org/wiki/Manaus",
+      "categorias": [
+        "Natureza",
+        "Cultura",
+        "Aventura",
+        "Ponto turístico"
+      ],
+      "fotos": [
+        {
+          "arquivo": "File:Amazon Theatre, Teatro Amazonas. Manaus, Brazil. 01.jpg",
+          "titulo": "Teatro Amazonas",
+          "categoria": "Cultura"
+        },
+        {
+          "arquivo": "File:Vista do Centro de Manaus.jpg",
+          "titulo": "Centro de Manaus",
+          "categoria": "Ponto turístico"
+        },
+        {
+          "arquivo": "File:Aerial view of the Amazon Rainforest.jpg",
+          "titulo": "Floresta amazônica",
+          "categoria": "Natureza"
+        },
+        {
+          "arquivo": "File:Amazon River - 2018.jpg",
+          "titulo": "Rio Amazonas",
+          "categoria": "Natureza"
+        },
+        {
+          "arquivo": "File:Amazon boat - panoramio (1).jpg",
+          "titulo": "Passeio de barco no Amazonas",
+          "categoria": "Aventura"
+        },
+        {
+          "arquivo": "File:Amazon sunset - panoramio.jpg",
+          "titulo": "Pôr do sol no Amazonas",
+          "categoria": "Natureza"
+        }
+      ]
+    },
+    {
+      "id": "13618",
+      "nome": "Ouro Preto",
+      "descricao": "Cidade colonial mineira com arquitetura barroca e mineração de ouro no século XVIII.",
+      "url": "https://pt.wikipedia.org/wiki/Ouro_Preto",
+      "categorias": [
+        "Histórico",
+        "Monumentos",
+        "Gastronomia",
+        "Cultura"
+      ],
+      "fotos": [
+        {
+          "arquivo": "File:Conjunto arquitetônico e urbanístico de Ouro Preto.JPG",
+          "titulo": "Conjunto arquitetônico de Ouro Preto",
+          "categoria": "Histórico"
+        },
+        {
+          "arquivo": "File:CASA DOS CONTOS.jpg",
+          "titulo": "Casa dos Contos",
+          "categoria": "Monumentos"
+        },
+        {
+          "arquivo": "File:CHAFARIZ DE MARÍLIA.jpg",
+          "titulo": "Chafariz de Marília",
+          "categoria": "Monumentos"
+        },
+        {
+          "arquivo": "File:Cemitério da Igreja das Mercês de Baixo (9017466369).jpg",
+          "titulo": "Cemitério das Mercês de Baixo",
+          "categoria": "Histórico"
+        },
+        {
+          "arquivo": "File:Museu da inconfidencia.JPG",
+          "titulo": "Museu da Inconfidência",
+          "categoria": "Cultura"
+        },
+        {
+          "arquivo": "File:Pão de Queijo - cheese bread.jpg",
+          "titulo": "Pão de queijo",
+          "categoria": "Gastronomia"
+        }
+      ]
+    },
+    {
+      "id": "26397",
+      "nome": "Salvador",
+      "descricao": "Capital da Bahia, com o conjunto colonial do Pelourinho e a orla do Porto da Barra.",
+      "url": "https://pt.wikipedia.org/wiki/Salvador",
+      "categorias": [
+        "Praias",
+        "Histórico",
+        "Gastronomia",
+        "Ponto turístico"
+      ],
+      "fotos": [
+        {
+          "arquivo": "File:Largo do Pelourinho, Salvador 20150719-DSC05452.JPG",
+          "titulo": "Largo do Pelourinho",
+          "categoria": "Histórico"
+        },
+        {
+          "arquivo": "File:Pelourinho Salvador Bahia 2018-0601.jpg",
+          "titulo": "Casario do Pelourinho",
+          "categoria": "Ponto turístico"
+        },
+        {
+          "arquivo": "File:Centro Histórico Salvador Vista Aérea 2021-0933.jpg",
+          "titulo": "Centro histórico de Salvador",
+          "categoria": "Histórico"
+        },
+        {
+          "arquivo": "File:Caldo de Sururu, Salvador, BA, 14-02-2023.jpg",
+          "titulo": "Caldo de sururu",
+          "categoria": "Gastronomia"
+        },
+        {
+          "arquivo": "File:Acarajé - A baiana do Acarajé Claudia Baiana.jpg",
+          "titulo": "Acarajé da Baiana",
+          "categoria": "Gastronomia"
+        },
+        {
+          "arquivo": "File:Praia do Porto da Barra 7784.jpg",
+          "titulo": "Praia do Porto da Barra",
+          "categoria": "Praias"
+        }
+      ]
+    },
+    {
+      "id": "1679",
+      "nome": "Recife",
+      "descricao": "Capital de Pernambuco entre rios e canais, berço do frevo e da culinária local.",
+      "url": "https://pt.wikipedia.org/wiki/Recife",
+      "categorias": [
+        "Praias",
+        "Histórico",
+        "Gastronomia",
+        "Cultura",
+        "Ponto turístico"
+      ],
+      "fotos": [
+        {
+          "arquivo": "File:Capela Dourada da Ordem Franciscana do Recife.jpg",
+          "titulo": "Capela Dourada",
+          "categoria": "Histórico"
+        },
+        {
+          "arquivo": "File:Fachada da Faculdade de Direito do Recife (2025).jpg",
+          "titulo": "Faculdade de Direito do Recife",
+          "categoria": "Histórico"
+        },
+        {
+          "arquivo": "File:Frevo dancer - Recife, Pernambuco, Brazil.jpg",
+          "titulo": "Frevo no Recife",
+          "categoria": "Cultura"
+        },
+        {
+          "arquivo": "File:Bolo de Rolo, doce brasileiro, típico de Pernambuco.jpg",
+          "titulo": "Bolo de rolo",
+          "categoria": "Gastronomia"
+        },
+        {
+          "arquivo": "File:Bicicleata Bertotti 65613 na Praça Rio Branco ou Marco Zero do Recife.jpg",
+          "titulo": "Marco Zero",
+          "categoria": "Ponto turístico"
+        },
+        {
+          "arquivo": "File:Boa Viagem (2) - Recife - Pernambuco, Brasil.jpg",
+          "titulo": "Praia de Boa Viagem",
+          "categoria": "Praias"
+        }
+      ]
+    },
+    {
+      "id": "12904",
+      "nome": "Olinda",
+      "descricao": "Sítio histórico pernambucano com igrejas coloniais e carnaval de frevo.",
+      "url": "https://pt.wikipedia.org/wiki/Olinda",
+      "categorias": [
+        "Histórico",
+        "Monumentos",
+        "Cultura"
+      ],
+      "fotos": [
+        {
+          "arquivo": "File:Igreja Nossa Senhora do Monte (19641348536).jpg",
+          "titulo": "Igreja Nossa Senhora do Monte",
+          "categoria": "Monumentos"
+        },
+        {
+          "arquivo": "File:Igreja do Carmo - Olinda - Outside Recife - Brazil - 01.jpg",
+          "titulo": "Igreja do Carmo",
+          "categoria": "Monumentos"
+        },
+        {
+          "arquivo": "File:Igreja da Misericórdia - Olinda, Pernambuco, Brasil.jpg",
+          "titulo": "Igreja da Misericórdia",
+          "categoria": "Monumentos"
+        },
+        {
+          "arquivo": "File:Vista aérea do sítio histórico de Olinda (3590715568).jpg",
+          "titulo": "Vista aérea do sítio histórico",
+          "categoria": "Histórico"
+        },
+        {
+          "arquivo": "File:Largo da Igreja do Rosário dos Homens Pretos (3369770631).jpg",
+          "titulo": "Largo do Rosário dos Homens Pretos",
+          "categoria": "Histórico"
+        },
+        {
+          "arquivo": "File:2023-02-18 Carnaval de Olinda, Polo Erasto Vasconcelos 05.jpg",
+          "titulo": "Carnaval de Olinda",
+          "categoria": "Cultura"
+        }
+      ]
+    },
+    {
+      "id": "7703",
+      "nome": "Búzios",
+      "descricao": "Arraial de pescadores entre ilhas, com praias, trapiche e ruelas de pedra.",
+      "url": "https://pt.wikipedia.org/wiki/B%C3%BAzios",
+      "categorias": [
+        "Praias",
+        "Gastronomia",
+        "Aventura",
+        "Ponto turístico"
+      ],
+      "fotos": [
+        {
+          "arquivo": "File:Praia da Armação, Búzios 3.JPG",
+          "titulo": "Praia da Armação",
+          "categoria": "Praias"
+        },
+        {
+          "arquivo": "File:Praia de Buzios.jpg",
+          "titulo": "Praia de Búzios",
+          "categoria": "Praias"
+        },
+        {
+          "arquivo": "File:ALTO DA BRAVA EM BUZIOS RJ.jpg",
+          "titulo": "Alto da Brava",
+          "categoria": "Aventura"
+        },
+        {
+          "arquivo": "File:Armação de Búzios - Rio de Janeiro, Brasil - panoramio.jpg",
+          "titulo": "Arraial de Búzios",
+          "categoria": "Ponto turístico"
+        },
+        {
+          "arquivo": "File:Camarão aberto grelhado.jpg",
+          "titulo": "Camarão grelhado",
+          "categoria": "Gastronomia"
+        },
+        {
+          "arquivo": "File:Moqueca de camarão.jpeg",
+          "titulo": "Moqueca de camarão",
+          "categoria": "Gastronomia"
+        }
+      ]
+    },
+    {
+      "id": "1880",
+      "nome": "Ubatuba",
+      "descricao": "Litoral de Mata Atlântica entre serras e praias, rota famosa de surf.",
+      "url": "https://pt.wikipedia.org/wiki/Ubatuba",
+      "categorias": [
+        "Natureza",
+        "Praias",
+        "Gastronomia",
+        "Aventura"
+      ],
+      "fotos": [
+        {
+          "arquivo": "File:Alamada Beach, Ubatuba (15951733719).jpg",
+          "titulo": "Praia do Alamada",
+          "categoria": "Praias"
+        },
+        {
+          "arquivo": "File:Ubatuba Praia da Lagoinha Por do Sol.JPG",
+          "titulo": "Praia da Lagoinha ao pôr do sol",
+          "categoria": "Praias"
+        },
+        {
+          "arquivo": "File:Ap. do rodrigo, serra com mata Atlântica (fundo) - panoramio.jpg",
+          "titulo": "Serra do Mar com Mata Atlântica",
+          "categoria": "Natureza"
+        },
+        {
+          "arquivo": "File:6 ILHA DAS COUVES - UBATUBA.jpg",
+          "titulo": "Ilha das Coves",
+          "categoria": "Aventura"
+        },
+        {
+          "arquivo": "File:Gruta que chora (26219871263).jpg",
+          "titulo": "Gruta que Chora",
+          "categoria": "Aventura"
+        },
+        {
+          "arquivo": "File:Açaí na tigela - Acai bowl.jpg",
+          "titulo": "Açaí na tigela",
+          "categoria": "Gastronomia"
+        }
+      ]
+    },
+    {
+      "id": "25783",
+      "nome": "Bonito",
+      "descricao": "Rio Formoso de águas claras, cachoeiras de tufa e grutas no Mato Grosso do Sul.",
+      "url": "https://pt.wikipedia.org/wiki/Bonito",
+      "categorias": [
+        "Natureza",
+        "Aventura",
+        "Ponto turístico"
+      ],
+      "fotos": [
+        {
+          "arquivo": "File:Cachoeira Véu da Noiva II.jpg",
+          "titulo": "Cachoeira Véu da Noiva",
+          "categoria": "Natureza"
+        },
+        {
+          "arquivo": "File:Rio Formoso, Bonito(MS) Caroline Meirelles (02).jpg",
+          "titulo": "Rio Formoso",
+          "categoria": "Natureza"
+        },
+        {
+          "arquivo": "File:Crystal Clear Waters.JPG",
+          "titulo": "Águas cristalinas",
+          "categoria": "Natureza"
+        },
+        {
+          "arquivo": "File:Espelho-nascente.jpg",
+          "titulo": "Espelho Nascente",
+          "categoria": "Aventura"
+        },
+        {
+          "arquivo": "File:Boca da Onça, Bonito, MS.JPG",
+          "titulo": "Boca da Onça",
+          "categoria": "Ponto turístico"
+        },
+        {
+          "arquivo": "File:Bonito - MS - Balneário Ilha do Padre (corda bamba) - panoramio.jpg",
+          "titulo": "Balneário Ilha do Padre",
+          "categoria": "Ponto turístico"
+        }
+      ]
+    },
+    {
+      "id": "15465",
+      "nome": "Vila Velha",
+      "descricao": "Primeira vila do Brasil, com o Convento da Penha e as praias da Serra do Mar.",
+      "url": "https://pt.wikipedia.org/wiki/Vila_Velha",
+      "categorias": [
+        "Praias",
+        "Histórico",
+        "Monumentos",
+        "Cultura"
+      ],
+      "fotos": [
+        {
+          "arquivo": "File:CONVENTO DA PENHA - panoramio.jpg",
+          "titulo": "Convento da Penha",
+          "categoria": "Monumentos"
+        },
+        {
+          "arquivo": "File:Convento da Penha - Subindo com fé.jpg",
+          "titulo": "Escadaria do Convento da Penha",
+          "categoria": "Histórico"
+        },
+        {
+          "arquivo": "File:Bençãos da Penha.JPG",
+          "titulo": "Bençãos da Penha",
+          "categoria": "Cultura"
+        },
+        {
+          "arquivo": "File:Centro de Vila Velha, Vila Velha - ES, Brazil - panoramio (1).jpg",
+          "titulo": "Centro de Vila Velha",
+          "categoria": "Histórico"
+        },
+        {
+          "arquivo": "File:Praia de Itaparica, Vila Velha - ES, Brazil - panoramio.jpg",
+          "titulo": "Praia de Itaparica",
+          "categoria": "Praias"
+        },
+        {
+          "arquivo": "File:Praia de itapuã, vila velha es.jpg",
+          "titulo": "Praia de Itapoã",
+          "categoria": "Praias"
+        }
+      ]
+    },
+    {
+      "id": "33759",
+      "nome": "Angra dos Reis",
+      "descricao": "Baía de ilhas entre serras e Mata Atlântica, com Praia Secreta e o Lazareto.",
+      "url": "https://pt.wikipedia.org/wiki/Angra_dos_Reis",
+      "categorias": [
+        "Natureza",
+        "Praias",
+        "Histórico",
+        "Ponto turístico"
+      ],
+      "fotos": [
+        {
+          "arquivo": "File:Praia Secreta - Angra dos Reis - Brasil - panoramio.jpg",
+          "titulo": "Praia Secreta",
+          "categoria": "Praias"
+        },
+        {
+          "arquivo": "File:Beleza da Lagoa Azul.jpg",
+          "titulo": "Lagoa Azul",
+          "categoria": "Praias"
+        },
+        {
+          "arquivo": "File:Cataramã Ilha Grande Rio de Janeiro.JPG",
+          "titulo": "Cachoeira de Catarama",
+          "categoria": "Natureza"
+        },
+        {
+          "arquivo": "File:Cachoeira da Feiticeira- Ilha Grande.jpg",
+          "titulo": "Cachoeira da Feiticeira",
+          "categoria": "Natureza"
+        },
+        {
+          "arquivo": "File:A ponte de Ilha Grande.JPG",
+          "titulo": "Ponte de Ilha Grande",
+          "categoria": "Ponto turístico"
+        },
+        {
+          "arquivo": "File:20210116081318 ruínas lazareto ilha grande.jpg",
+          "titulo": "Ruínas do Lazareto",
+          "categoria": "Histórico"
+        }
+      ]
+    }
+  ]
+}

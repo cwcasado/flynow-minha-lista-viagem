@@ -1,0 +1,1265 @@
+/* Reset e variáveis globais para FlyNow */
+
+:root {
+  --primary: #1e3a5f;
+  --primary-light: #2d5a8a;
+  --accent: #e8a838;
+  --accent-hover: #d4962e;
+  --bg: #f8f9fa;
+  --bg-card: #ffffff;
+  --text: #2d3748;
+  --text-light: #718096;
+  --border: #e2e8f0;
+  --error: #e53e3e;
+  --error-text: #c53030;
+  --text-soft: #5b6b7f;
+  --success: #38a169;
+  --shadow: 0 4px 6px rgba(0, 0, 0, 0.07);
+  --shadow-hover: 0 8px 15px rgba(0, 0, 0, 0.1);
+  --radius: 12px;
+  --radius-sm: 8px;
+  --transition: 0.2s ease;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --primary: #2d5a8a;
+    --primary-light: #3d6ba8;
+    --accent: #f0b848;
+    --accent-hover: #e8a838;
+    --bg: #1a202c;
+    --bg-card: #2d3748;
+    --text: #e2e8f0;
+    --text-light: #a0aec0;
+    --border: #4a5568;
+    --error-text: #fca5a5;
+    --text-soft: #b6c2d1;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    --shadow-hover: 0 8px 15px rgba(0, 0, 0, 0.4);
+  }
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+#root {
+  min-height: 100vh;
+  width: 100%;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+button {
+  font-family: inherit;
+}
+
+input, textarea {
+  font-family: inherit;
+}
+
+a {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-light);
+}
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main {
+  flex: 1;
+  padding: 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.header {
+  background: var(--bg-card);
+  border-bottom: 1px solid var(--border);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.header-brand {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.brand-mark {
+  width: 48px;
+  height: 48px;
+}
+
+.brand-logo {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.brand-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.brand-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin: 0;
+}
+
+.brand-subtitle {
+  font-size: 0.9rem;
+  color: var(--text-light);
+  margin: 0;
+}
+
+.brand-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.stat-pill {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  border-radius: var(--radius-sm);
+  background: var(--bg);
+  font-size: 0.9rem;
+  color: var(--text-light);
+}
+
+.stat-pill-primary {
+  background: var(--accent);
+  color: white;
+}
+
+.stat-icon {
+  font-size: 1.1rem;
+}
+
+.theme-toggle {
+  background: transparent;
+  border: 2px solid var(--border);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all var(--transition);
+}
+
+.theme-toggle:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+.theme-toggle-dark {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.header-hero {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.hero-search {
+  flex: 1;
+  min-width: 250px;
+  position: relative;
+}
+
+.search-icon {
+  position: absolute;
+  left: 0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 18px;
+  height: 18px;
+  color: var(--text-light);
+}
+
+.search-input {
+  width: 100%;
+  padding: 0.75rem 2.5rem 0.75rem 2.5rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  font-size: 1rem;
+  background: var(--bg-card);
+  color: var(--text);
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(30, 58, 95, 0.1);
+}
+
+.search-clear {
+  position: absolute;
+  right: 0.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: var(--text-light);
+  padding: 0.25rem;
+}
+
+.search-clear:hover {
+  color: var(--text);
+}
+
+.hero-filters {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.filter-chip {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--bg-card);
+  color: var(--text);
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all var(--transition);
+}
+
+.filter-chip:hover {
+  border-color: var(--primary);
+}
+
+.filter-chip:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+  border-color: var(--border);
+}
+
+.filter-chip:disabled:hover {
+  border-color: var(--border);
+}
+
+.filter-chip.active {
+  background: var(--primary);
+  color: white;
+  border-color: var(--primary);
+}
+
+.filter-emoji {
+  font-size: 1.1rem;
+}
+
+.section {
+  margin-bottom: 2rem;
+}
+
+.section-head {
+  margin-bottom: 1rem;
+}
+
+.section-head h2 {
+  font-size: 1.5rem;
+  color: var(--primary);
+}
+
+.muted {
+  color: var(--text-soft);
+  font-size: 0.9rem;
+}
+
+.section-head .muted {
+  color: var(--text-soft);
+  font-size: 0.9rem;
+}
+
+.main-nav {
+  display: flex;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border-bottom: 1px solid var(--border);
+  background: var(--bg);
+  overflow-x: auto;
+}
+
+.nav-link {
+  color: var(--text-light);
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-sm);
+  font-weight: 500;
+  white-space: nowrap;
+  transition: all var(--transition);
+}
+
+.nav-link:hover {
+  color: var(--primary);
+  background: var(--bg-card);
+}
+
+.nav-link.ativo {
+  color: var(--primary);
+  background: var(--bg-card);
+  font-weight: 600;
+}
+
+.minha-lista-banner {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.banner-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.banner-head h3 {
+  font-size: 1rem;
+  margin: 0;
+}
+
+.chips {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.chip {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.25rem 0.5rem;
+  background: var(--bg);
+  border-radius: 999px;
+  font-size: 0.85rem;
+}
+
+.chip button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: var(--text-light);
+  padding: 0;
+  line-height: 1;
+}
+
+.chip button:hover {
+  color: var(--error);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1.5rem;
+}
+
+.card {
+  background: var(--bg-card);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-hover);
+}
+
+.card-media {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  background: var(--bg);
+}
+
+.card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: opacity 0.3s ease;
+}
+
+.card-img.placeholder {
+  object-fit: contain;
+  background: var(--bg);
+}
+
+.card-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 60%;
+  background: linear-gradient(to top, rgba(0,0,0,0.6), transparent);
+  pointer-events: none;
+}
+
+.card-category {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  background: var(--accent);
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  z-index: 2;
+}
+
+.card-fav {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.9);
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  transition: all var(--transition);
+  z-index: 2;
+}
+
+.card-fav:hover {
+  transform: scale(1.1);
+  background: white;
+}
+
+.card-fav.is-active {
+  background: var(--accent);
+  color: white;
+}
+
+.card-body {
+  padding: 1rem;
+}
+
+.card-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+}
+
+.card-desc {
+  font-size: 0.9rem;
+  color: var(--text-light);
+  margin-bottom: 1rem;
+  line-height: 1.5;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.card-foot {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.card-link {
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.card-link:hover {
+  text-decoration: underline;
+}
+
+.card-skeleton {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    90deg,
+    var(--bg) 0%,
+    var(--bg-card) 50%,
+    var(--bg) 100%
+  );
+  background-size: 200% 100%;
+  animation: skeleton-loading 1.5s infinite;
+  z-index: 1;
+}
+
+@keyframes skeleton-loading {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+/* Fundo da seção de contato — uma foto por tema:
+   claro  : "Areia e Mar", Wanessa Gabrielle / Wikimedia Commons, CC BY-SA 4.0
+   noturno: "Revoada de guarás no Delta do Parnaíba", MTur Destinos / Wikimedia Commons,
+            domínio público.
+   Ambas em public/ (ver scripts/baixar-fundo.py). */
+.form-section {
+  position: relative;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.75rem 2rem;
+  box-shadow: none;
+  background-color: #eaf3fa;
+  background-image:
+    linear-gradient(
+      100deg,
+      rgba(250, 252, 254, 0.97) 0%,
+      rgba(250, 252, 254, 0.96) 50%,
+      rgba(250, 252, 254, 0.78) 72%,
+      rgba(250, 252, 254, 0.34) 100%
+    ),
+    url("/fundo-contato-claro.jpg");
+  background-repeat: no-repeat;
+  background-size: cover, cover;
+  background-position: center, center;
+
+  /* Cores "sobre a foto" — trocadas por tema logo abaixo */
+  --contato-titulo: var(--text);
+  --contato-texto: var(--text);
+  --contato-suave: #4a5568;
+  --contato-erro: #9b2c2c;
+  --contato-chip-bg: rgba(255, 255, 255, 0.62);
+  --contato-chip-bg-hover: rgba(255, 255, 255, 0.95);
+  --contato-chip-borda: rgba(45, 55, 72, 0.25);
+  --contato-campo-borda: #b9c6d6;
+  --contato-foco: rgba(30, 58, 95, 0.28);
+  --contato-btn-borda: transparent;
+
+  color: var(--contato-texto);
+}
+
+:root[data-tema="noturno"] .form-section {
+  border-color: rgba(255, 255, 255, 0.16);
+  background-color: #16202e;
+  background-image:
+    linear-gradient(
+      100deg,
+      rgba(10, 20, 32, 0.95) 0%,
+      rgba(10, 20, 32, 0.9) 42%,
+      rgba(10, 20, 32, 0.72) 72%,
+      rgba(10, 20, 32, 0.55) 100%
+    ),
+    url("/fundo-contato.jpg");
+
+  --contato-titulo: #ffffff;
+  --contato-texto: #eef3fa;
+  --contato-suave: #cbd5e1;
+  --contato-erro: #fecaca;
+  --contato-chip-bg: rgba(255, 255, 255, 0.1);
+  --contato-chip-bg-hover: rgba(255, 255, 255, 0.2);
+  --contato-chip-borda: rgba(255, 255, 255, 0.4);
+  --contato-campo-borda: rgba(255, 255, 255, 0.4);
+  --contato-foco: rgba(232, 168, 56, 0.55);
+  --contato-btn-borda: rgba(255, 255, 255, 0.45);
+}
+
+.form-head {
+  margin-bottom: 1.25rem;
+  text-align: left;
+}
+
+.form-head h2 {
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 0.35rem;
+}
+
+.form {
+  max-width: 560px;
+  margin: 0;
+}
+
+.field {
+  margin-bottom: 1rem;
+}
+
+.field label {
+  display: block;
+  font-weight: 500;
+  font-size: 0.9rem;
+  color: var(--text);
+  margin-bottom: 0.35rem;
+}
+
+.field input,
+.field textarea {
+  width: 100%;
+  padding: 0.7rem 0.9rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  font-size: 1rem;
+  font-family: inherit;
+  background: var(--bg-card);
+  color: var(--text);
+  transition: border-color var(--transition), box-shadow var(--transition);
+}
+
+.field input:focus,
+.field textarea:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(30, 58, 95, 0.1);
+}
+
+.field input[aria-invalid="true"],
+.field textarea[aria-invalid="true"] {
+  border-color: var(--error);
+}
+
+.field textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.help {
+  display: block;
+  min-height: 1.1rem;
+  font-size: 0.78rem;
+  margin-top: 0.25rem;
+  color: var(--text-soft);
+}
+
+.help.error {
+  color: var(--error-text);
+}
+
+.sugestoes {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.45rem;
+  margin-top: 0.5rem;
+}
+
+.sugestoes-label {
+  width: 100%;
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: var(--text-soft);
+  margin-bottom: 0.25rem;
+}
+
+.chip-sugestao {
+  padding: 0.3rem 0.7rem;
+  background: transparent;
+  border: 1px dashed var(--border);
+  border-radius: 999px;
+  font-size: 0.8rem;
+  color: var(--text-soft);
+  cursor: pointer;
+  transition: border-color var(--transition), color var(--transition), background var(--transition);
+}
+
+.chip-sugestao:hover {
+  background: var(--bg);
+  color: var(--text);
+  border-color: var(--accent);
+}
+
+.chip-sugestao:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+.form-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem 1rem;
+  margin-top: 1.25rem;
+}
+
+.form-nota {
+  font-size: 0.78rem;
+  color: var(--text-soft);
+}
+
+/* Texto e controles sobre a foto — cores vêm das variáveis do tema */
+.form-section .form-head h2 {
+  color: var(--contato-titulo);
+}
+
+.form-section .form-head .muted,
+.form-section .sugestoes-label {
+  color: var(--contato-suave);
+}
+
+.form-section .field label {
+  color: var(--contato-texto);
+}
+
+.form-section .help {
+  color: var(--contato-suave);
+}
+
+.form-section .help.error {
+  color: var(--contato-erro);
+}
+
+.form-section .form-nota {
+  color: var(--contato-suave);
+}
+
+.form-section .field input,
+.form-section .field textarea {
+  background: #ffffff;
+  border-color: var(--contato-campo-borda);
+  color: #1a202c;
+}
+
+.form-section .field input::placeholder,
+.form-section .field textarea::placeholder {
+  color: #64748b;
+}
+
+.form-section .field input:focus,
+.form-section .field textarea:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--contato-foco);
+}
+
+.form-section .field input[aria-invalid="true"],
+.form-section .field textarea[aria-invalid="true"] {
+  border-color: var(--contato-erro);
+}
+
+.form-section .chip-sugestao {
+  background: var(--contato-chip-bg);
+  border-color: var(--contato-chip-borda);
+  color: var(--contato-texto);
+}
+
+.form-section .chip-sugestao:hover {
+  background: var(--contato-chip-bg-hover);
+  border-color: var(--accent);
+  color: var(--contato-titulo);
+}
+
+.form-section .btn-primary {
+  border: 1px solid var(--contato-btn-borda);
+}
+
+.form-section .chip-sugestao:focus-visible {
+  outline-color: var(--accent);
+}
+
+/* Crédito da foto exibida — CC BY-SA exige atribuição */
+.form-credito {
+  margin-top: 1rem;
+  font-size: 0.7rem;
+  line-height: 1.5;
+  color: var(--contato-suave);
+}
+
+.form-credito a {
+  color: inherit;
+  text-decoration: underline;
+}
+
+.credito-noturno {
+  display: none;
+}
+
+:root[data-tema="noturno"] .credito-claro {
+  display: none;
+}
+
+:root[data-tema="noturno"] .credito-noturno {
+  display: inline;
+}
+
+.btn {
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--radius-sm);
+  border: none;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all var(--transition);
+}
+
+.btn-primary {
+  background: var(--primary);
+  color: white;
+}
+
+.btn-primary:hover {
+  background: var(--primary-light);
+}
+
+.btn-primary:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.btn-ghost {
+  background: transparent;
+  color: var(--text-light);
+  padding: 0.5rem 1rem;
+}
+
+.btn-ghost:hover {
+  color: var(--text);
+}
+
+.btn-ghost.is-active {
+  color: var(--accent);
+}
+
+.btn-ghost.small {
+  padding: 0.25rem 0.5rem;
+  font-size: 0.85rem;
+}
+
+.alert {
+  padding: 1rem;
+  border-radius: var(--radius-sm);
+  margin-top: 1rem;
+}
+
+.alert-error {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.alert-success {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.alert-preview {
+  margin-top: 0.5rem;
+  padding-top: 0.5rem;
+  border-top: 1px solid rgba(0,0,0,0.1);
+  font-size: 0.9rem;
+}
+
+.alert-preview span {
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+.desejos {
+  list-style: none;
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.desejo, .desejo-feito {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+}
+
+.desejo input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+}
+
+.desejo-feito {
+  opacity: 0.7;
+}
+
+.desejo-feito span {
+  text-decoration: line-through;
+  color: var(--text-light);
+}
+
+.desejo button {
+  background: var(--error);
+  color: white;
+  border: none;
+  padding: 0.25rem 0.75rem;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.desejo button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+@media (max-width: 768px) {
+  .header {
+    padding: 0.75rem;
+  }
+
+  .brand-title {
+    font-size: 1.25rem;
+  }
+
+  .brand-actions {
+    flex-wrap: wrap;
+  }
+
+  .main-nav {
+    padding: 0.5rem;
+  }
+
+  .nav-link {
+    padding: 0.5rem;
+    font-size: 0.9rem;
+  }
+
+  .hero-search {
+    min-width: 100%;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .minha-lista-banner {
+    padding: 0.75rem;
+  }
+
+  .banner-head {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .banner-head button {
+    width: 100%;
+  }
+
+  /* No mobile a foto vira faixa de fundo: gradiente vertical, mais fechado */
+  .form-section {
+    padding: 1.5rem;
+    background-image:
+      linear-gradient(
+        180deg,
+        rgba(250, 252, 254, 0.97) 0%,
+        rgba(250, 252, 254, 0.96) 55%,
+        rgba(250, 252, 254, 0.88) 100%
+      ),
+      url("/fundo-contato-claro.jpg");
+    background-position: center, 62% center;
+  }
+
+  :root[data-tema="noturno"] .form-section {
+    background-image:
+      linear-gradient(
+        180deg,
+        rgba(10, 20, 32, 0.95) 0%,
+        rgba(10, 20, 32, 0.93) 60%,
+        rgba(10, 20, 32, 0.78) 100%
+      ),
+      url("/fundo-contato.jpg");
+  }
+}
+
+@media (max-width: 480px) {
+  .form-section {
+    padding: 1.25rem;
+  }
+
+  .form-head h2 {
+    font-size: 1.2rem;
+  }
+
+  .field input,
+  .field textarea {
+    padding: 0.6rem;
+  }
+
+  .form-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .chip-sugestao {
+    font-size: 0.8rem;
+    padding: 0.3rem 0.6rem;
+  }
+
+  .desejo, .desejo-feito {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .desejo button {
+    width: 100%;
+  }
+}
+
+/* ============================================================
+   Carrossel de fotos dentro do card (6 fotos por destino)
+   ============================================================ */
+
+.carousel {
+  outline: none;
+}
+
+.carousel:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: -3px;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 34px;
+  height: 34px;
+  border: none;
+  border-radius: 50%;
+  background: rgba(15, 23, 42, 0.45);
+  color: #fff;
+  font-size: 1.5rem;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity var(--transition), background var(--transition);
+  z-index: 3;
+}
+
+.carousel:hover .carousel-btn,
+.carousel:focus-within .carousel-btn {
+  opacity: 1;
+}
+
+.carousel-btn:hover {
+  background: rgba(15, 23, 42, 0.78);
+}
+
+.carousel-prev {
+  left: 0.6rem;
+}
+
+.carousel-next {
+  right: 0.6rem;
+}
+
+@media (hover: none) {
+  .carousel-btn {
+    opacity: 1;
+  }
+}
+
+.carousel-counter {
+  position: absolute;
+  right: 0.75rem;
+  bottom: 0.75rem;
+  padding: 0.15rem 0.5rem;
+  border-radius: 999px;
+  background: rgba(15, 23, 42, 0.65);
+  color: #fff;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  z-index: 3;
+}
+
+.carousel-dots {
+  position: absolute;
+  left: 50%;
+  bottom: 0.75rem;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 0.3rem;
+  z-index: 3;
+}
+
+.carousel-dot {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.carousel-dot::after {
+  content: "";
+  position: absolute;
+  inset: 6px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.55);
+  transition: background var(--transition), transform var(--transition);
+}
+
+.carousel-dot:hover::after {
+  background: rgba(255, 255, 255, 0.85);
+}
+
+.carousel-dot.is-active::after {
+  background: var(--accent);
+  transform: scale(1.35);
+}
+
+.carousel-caption {
+  position: absolute;
+  left: 0.75rem;
+  bottom: 2.1rem;
+  max-width: 58%;
+  color: #fff;
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.75);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  z-index: 2;
+}
+
+@media (max-width: 480px) {
+  .carousel-caption {
+    max-width: 46%;
+    font-size: 0.68rem;
+  }
+}
+
+/* ============================================================
+   Tema explícito (o botão do header define data-tema no <html>)
+   ============================================================ */
+
+:root[data-tema="claro"] {
+  --primary: #1e3a5f;
+  --primary-light: #2d5a8a;
+  --accent: #e8a838;
+  --accent-hover: #d4962e;
+  --bg: #f8f9fa;
+  --bg-card: #ffffff;
+  --text: #2d3748;
+  --text-light: #718096;
+  --border: #e2e8f0;
+  --error-text: #c53030;
+  --text-soft: #5b6b7f;
+  --shadow: 0 4px 6px rgba(0, 0, 0, 0.07);
+  --shadow-hover: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+:root[data-tema="noturno"] {
+  --primary: #2d5a8a;
+  --primary-light: #3d6ba8;
+  --accent: #f0b848;
+  --accent-hover: #e8a838;
+  --bg: #1a202c;
+  --bg-card: #2d3748;
+  --text: #e2e8f0;
+  --text-light: #a0aec0;
+  --border: #4a5568;
+  --error-text: #fca5a5;
+  --text-soft: #b6c2d1;
+  --shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  --shadow-hover: 0 8px 15px rgba(0, 0, 0, 0.4);
+}
+
+/* Economia de dados: mantém o painel do tema, sem baixar a foto */
+@media (prefers-reduced-data: reduce) {
+  .form-section {
+    background-image: none;
+    background-color: #eaf3fa;
+  }
+
+  :root[data-tema="noturno"] .form-section {
+    background-image: none;
+    background-color: #16202e;
+  }
+}

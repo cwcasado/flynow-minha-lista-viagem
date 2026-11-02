@@ -1,0 +1,41 @@
+# Exercícios (lab files)
+Exercícios/
+
+# Dependencies
+node_modules/
+.pnpm-store/
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Build
+dist/
+build/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Python (scripts de curadoria)
+__pycache__/
+*.pyc
+
+# Logs
+*.log
+
+# Estado local do OpenCode
+.opencode/
+
+# Helper local do material de aula (caminho absoluto na máquina)
+pdf-to-md.py
+
+# Pools de curadoria (artefatos temporários, recriáveis pelos scripts)
+scripts/pool-*.json
