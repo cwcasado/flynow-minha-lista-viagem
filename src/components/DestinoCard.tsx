@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
-import { CATEGORIA_PADRAO, emojiDaCategoria } from "../data/categorias";
+import { CATEGORIA_PADRAO, iconeDaCategoria } from "../data/categorias";
+import { Icon } from "./Icon";
 import type { Destino, Foto } from "../types";
 
 type Props = {
@@ -103,7 +104,8 @@ export function DestinoCard({ destino, estaNaLista, onToggle }: Props) {
 
         {foto && (
           <span className="card-category">
-            <span aria-hidden="true">{emojiDaCategoria(foto.categoria)}</span> {foto.categoria}
+            <Icon name={iconeDaCategoria(foto.categoria)} size={14} aria-hidden />
+            <span>{foto.categoria}</span>
           </span>
         )}
 

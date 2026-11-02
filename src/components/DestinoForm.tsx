@@ -1,5 +1,6 @@
 import { useRef, useState } from "react";
 import type { ContatoFormData } from "../types";
+import { Icon } from "./Icon";
 
 type Props = {
   form: ContatoFormData;
@@ -11,11 +12,11 @@ type Props = {
 type Campo = keyof ContatoFormData;
 
 const SUGESTOES = [
-  { nome: "Cristo Redentor", emoji: "🗽" },
-  { nome: "Fernando de Noronha", emoji: "🏝️" },
-  { nome: "Lençóis Maranhenses", emoji: "🌊" },
-  { nome: "Gramado", emoji: "🏔️" },
-  { nome: "Cataratas do Iguaçu", emoji: "💦" },
+  { nome: "Cristo Redentor", icone: "monumentos" },
+  { nome: "Fernando de Noronha", icone: "praias" },
+  { nome: "Lençóis Maranhenses", icone: "natureza" },
+  { nome: "Gramado", icone: "ponto-turistico" },
+  { nome: "Cataratas do Iguaçu", icone: "natureza" },
 ];
 
 const EMAIL = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -168,7 +169,8 @@ export function DestinoForm({ form, onChange, onSubmit, enviado }: Props) {
                   )
                 }
               >
-                <span aria-hidden="true">{s.emoji}</span> {s.nome}
+                <Icon name={s.icone} size={16} aria-hidden />
+                <span>{s.nome}</span>
               </button>
             ))}
           </div>

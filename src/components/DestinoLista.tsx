@@ -1,6 +1,7 @@
 import type { FiltroCategoria } from "../contexts/DestinosContext";
 import type { Destino } from "../types";
 import { DestinoCard } from "./DestinoCard";
+import { Icon } from "./Icon";
 
 type Props = {
   destinos: Destino[];
@@ -89,7 +90,7 @@ export function DestinoLista({
 
       {vazio ? (
         <div className="empty">
-          <div className="empty-icon">🔍</div>
+          <Icon name="busca" size={48} className="empty-icon" />
           <h3>Nenhum destino encontrado</h3>
           <p>
             {filtro === "lista"

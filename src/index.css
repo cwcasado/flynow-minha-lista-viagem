@@ -19,6 +19,10 @@
   --radius: 12px;
   --radius-sm: 8px;
   --transition: 0.2s ease;
+  --icon-size: 20px;
+  --icon-size-sm: 14px;
+  --icon-size-lg: 48px;
+  --icon-color: var(--text-light);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -37,6 +41,46 @@
     --shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
     --shadow-hover: 0 8px 15px rgba(0, 0, 0, 0.4);
   }
+}
+
+/* ============================================================
+   Ícones do sistema (substituem emojis)
+   ============================================================ */
+svg {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.icon-sm {
+  width: var(--icon-size-sm);
+  height: var(--icon-size-sm);
+}
+
+.icon-lg {
+  width: var(--icon-size-lg);
+  height: var(--icon-size-lg);
+}
+
+/* Ícones nos filtros de categoria (Header) */
+.filter-emoji {
+  width: var(--icon-size-sm);
+  height: var(--icon-size-sm);
+  flex-shrink: 0;
+}
+
+/* Ícone no badge de categoria (DestinoCard) */
+.card-category Icon {
+  width: var(--icon-size-sm);
+  height: var(--icon-size-sm);
+  margin-right: 0.25rem;
+  vertical-align: -0.1em;
+}
+
+/* Ícone de estado vazio (DestinoLista) */
+.empty-icon {
+  color: var(--text-light);
+  margin-bottom: 0.75rem;
+  opacity: 0.6;
 }
 
 * {

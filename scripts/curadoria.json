@@ -1111,6 +1111,52 @@
           "categoria": "Histórico"
         }
       ]
+    },
+    {
+      "id": "230547",
+      "nome": "Morro de São Paulo",
+      "descricao": "Vila-pesqueira na Ilha de Tinharé, na Bahia, com trilhas entre manguezal e praia.",
+      "url": "https://pt.wikipedia.org/wiki/Morro_de_S%C3%A3o_Paulo",
+      "categorias": [
+        "Natureza",
+        "Praias",
+        "Histórico",
+        "Gastronomia",
+        "Cultura",
+        "Ponto turístico"
+      ],
+      "fotos": [
+        {
+          "arquivo": "File:Caminho de Gamboa - panoramio.jpg",
+          "titulo": "Caminho de Gamboa",
+          "categoria": "Ponto turístico"
+        },
+        {
+          "arquivo": "File:Segunda praia - panoramio (1).jpg",
+          "titulo": "Segunda Praia",
+          "categoria": "Praias"
+        },
+        {
+          "arquivo": "File:Corais na Praia de Morro de São Paulo.jpg",
+          "titulo": "Corais da praia",
+          "categoria": "Natureza"
+        },
+        {
+          "arquivo": "File:Fortaleza de Morro de São Paulo.jpg",
+          "titulo": "Fortaleza do Morro",
+          "categoria": "Histórico"
+        },
+        {
+          "arquivo": "File:Graffiti in Morro de São Paulo (12443206945).jpg",
+          "titulo": "Arte urbana no Morro",
+          "categoria": "Cultura"
+        },
+        {
+          "arquivo": "File:Bar flutuante de Canavieiras.jpg",
+          "titulo": "Bar flutuante de Canavieiras",
+          "categoria": "Gastronomia"
+        }
+      ]
     }
   ]
 }

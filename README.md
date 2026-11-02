@@ -30,7 +30,7 @@ Login de teste (DummyJSON): usuário `emilys`, senha `emilyspass`.
 
 | Recurso | Onde |
 |---|---|
-| Catálogo de 25 destinos × 6 fotos (150 fotos), com categoria em cada foto | `src/data/destinos.ts` (gerado) |
+| Catálogo de 26 destinos × 6 fotos (156 fotos), com categoria em cada foto | `src/data/destinos.ts` (gerado) |
 | Carrossel no card: setas, bolinhas, contador `1/6`, teclado ←/→ | `src/components/DestinoCard.tsx` |
 | Chips das 8 categorias com contagem real + busca sem acento | `src/components/Header.tsx` |
 | Estado global (destinos, filtro, lista, tema, contadores) | `src/contexts/DestinosContext.tsx` |
@@ -54,7 +54,7 @@ A fonte é `scripts/curadoria.json`; o catálogo é gerado por script — **não
 
 ```bash
 python scripts/gerar-destinos.py    # regera src/data/destinos.ts
-python scripts/validar-fotos.py     # valida as 150 URLs
+python scripts/validar-fotos.py     # valida as 156 URLs
 python scripts/checar-catalogo.py    # estrutura + títulos da Wikipedia
 ```
 

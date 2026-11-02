@@ -2,7 +2,7 @@
 
 Cada destino tem **6 fotos** do Wikimedia Commons, cada uma com **categoria própria**.
 As imagens são fixas (sem busca em runtime) e todas as URLs foram validadas com HTTP 200.
-Hoje são **25 destinos × 6 fotos = 150 fotos**.
+Hoje são **26 destinos × 6 fotos = 156 fotos**.
 
 ## Arquivos
 
@@ -11,20 +11,20 @@ Hoje são **25 destinos × 6 fotos = 150 fotos**.
 | `curadoria.json` | **Fonte da verdade.** Destino → 6 arquivos do Commons + categoria de cada foto. |
 | `gerar-destinos.py` | Lê `curadoria.json`, resolve a URL de thumbnail 960px na API do Commons, deriva as categorias do destino a partir das fotos e grava `src/data/destinos.ts`. |
 | `validar-fotos.py` | Faz GET (Range de 1 KB) em cada URL final e falha se alguma não responder 200/206. |
-| `checar-catalogo.py` | Confere o catálogo gerado (25 destinos, 6 fotos cada, sem URL duplicada, categorias coerentes) e o merge com a Wikipedia em lotes de 20. |
+| `checar-catalogo.py` | Confere o catálogo gerado (26 destinos, 6 fotos cada, sem URL duplicada, categorias coerentes) e o merge com a Wikipedia em lotes de 20. |
 | `commons_lib.py` | Funções compartilhadas da API (User-Agent identificado, pausa entre chamadas). |
 | `coletar-pool.py` | Coleta um pool de candidatas por destino para re-curadoria (catálogo antigo). |
 | `coletar-pool-novos.py` / `coletar-pool-alvo.py` | Coletas de pool dos 15 destinos novos → `pool-novos.json` / `pool-alvo.json`. |
 | `curar-novos.py` | Casa as 150 escolhas (chave + título + categoria) com os pools e acrescenta os 15 destinos à curadoria. Idempotente: rodar de novo substitui as entradas. |
 | `baixar-fundo.py` | Baixa/otimiza as duas fotos de fundo da seção de contato para `public/`. |
 | `medir-fundo.py` | Mede o pior contraste do texto sobre as fotos, por tema e por breakpoint. |
-| `verificacao-fotos.json` | Última verificação: 150 registros `{destino, arquivo, url, categoria}`. |
+| `verificacao-fotos.json` | Última verificação: 156 registros `{destino, arquivo, url, categoria}`. |
 
 ## Como regerar
 
 ```bash
 python scripts/gerar-destinos.py    # atualiza src/data/destinos.ts
-python scripts/validar-fotos.py     # confirma que as 150 URLs respondem
+python scripts/validar-fotos.py     # confirma que as 156 URLs respondem
 python scripts/checar-catalogo.py   # confere estrutura + títulos da Wikipedia
 ```
 

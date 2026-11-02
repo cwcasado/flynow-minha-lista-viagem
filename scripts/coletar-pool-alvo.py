@@ -139,6 +139,16 @@ ALVOS: dict[str, dict] = {
         ],
         "buscas": ["Angra dos Reis praia", "Angra dos Reis ilha"],
     },
+    "Morro de São Paulo": {
+        "artigo": "Morro de São Paulo",
+        "categorias": [
+            "Category:Morro de São Paulo",
+            "Category:Fortaleza do Morro de São Paulo",
+            "Category:Morro de São Paulo Lighthouse",
+            "Category:Segunda Praia, Morro de São Paulo",
+        ],
+        "buscas": [],
+    },
 }
 
 

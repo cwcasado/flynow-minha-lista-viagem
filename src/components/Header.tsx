@@ -1,5 +1,6 @@
 import { CATEGORIAS } from "../data/categorias";
 import { useDestinos } from "../contexts/DestinosContext";
+import { Icon } from "./Icon";
 import type { Categoria } from "../types";
 
 type HeaderProps = {
@@ -42,11 +43,11 @@ export function Header({ titulo, subtitulo }: HeaderProps) {
 
         <div className="brand-actions">
           <div className="stat-pill">
-            <span className="stat-icon" aria-hidden="true">🧭</span>
+            <Icon name="todos" size={16} className="stat-icon" />
             <span><strong>{destinos.length}</strong> destinos</span>
           </div>
           <div className="stat-pill stat-pill-primary">
-            <span className="stat-icon" aria-hidden="true">♡</span>
+            <Icon name="favorito" size={16} className="stat-icon" />
             <span><strong>{minhaLista.length}</strong> salvos</span>
           </div>
           <button
@@ -102,7 +103,7 @@ export function Header({ titulo, subtitulo }: HeaderProps) {
             aria-pressed={categoria === "todas"}
             onClick={() => selecionarCategoria("todas")}
           >
-            <span className="filter-emoji">🌎</span>
+            <Icon name="todos" size={16} className="filter-emoji" />
             <span>Todos ({destinos.length})</span>
           </button>
           {CATEGORIAS.map((item) => {
@@ -117,7 +118,7 @@ export function Header({ titulo, subtitulo }: HeaderProps) {
                 disabled={quantidade === 0}
                 onClick={() => selecionarCategoria(ativo ? "todas" : item.chave)}
               >
-                <span className="filter-emoji" aria-hidden="true">{item.emoji}</span>
+                <Icon name={item.icone} size={16} className="filter-emoji" />
                 <span>{item.chave} ({quantidade})</span>
               </button>
             );

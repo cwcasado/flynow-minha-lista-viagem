@@ -277,6 +277,21 @@ NOVOS = [
             ("ruinas lazareto ilha grande", "Ruínas do Lazareto", "Histórico"),
         ],
     ),
+    (
+        "Morro de São Paulo",
+        "230547",
+        "Vila-pesqueira na Ilha de Tinharé, na Bahia, com trilhas entre manguezal e praia.",
+        "https://pt.wikipedia.org/wiki/Morro_de_S%C3%A3o_Paulo",
+        ["Natureza", "Praias", "Histórico", "Cultura", "Gastronomia", "Ponto turístico"],
+        [
+            ("caminho de gamboa", "Caminho de Gamboa", "Ponto turístico"),
+            ("segunda praia", "Segunda Praia", "Praias"),
+            ("corais na praia", "Corais da praia", "Natureza"),
+            ("fortaleza de morro de sao paulo.jpg", "Fortaleza do Morro", "Histórico"),
+            ("graffiti in morro de sao paulo", "Arte urbana no Morro", "Cultura"),
+            ("bar flutuante de canavieiras", "Bar flutuante de Canavieiras", "Gastronomia"),
+        ],
+    ),
 ]
 
 
