@@ -1,93 +1,58 @@
 /* ============================================================
    Tokens de design — fonte única de verdade.
-   Tema claro por padrão, noturno por prefers-color-scheme e por
-   [data-tema] definido em <html> (ver DestinosContext).
+
+   Tema: `color-scheme` + `light-dark()`. O padrão segue o sistema
+   (light dark); o botão do header fixa `data-tema` no <html> e a
+   escolha explícita vence a preferência do sistema.
    ============================================================ */
 
 :root {
-  --primary: #1e3a5f;
-  --primary-light: #2d5a8a;
-  --accent: #e8a838;
-  --accent-hover: #d4962e;
-  --bg: #f8f9fa;
-  --bg-card: #ffffff;
-  --text: #2d3748;
-  --text-light: #718096;
-  --border: #e2e8f0;
-  --error: #e53e3e;
-  --error-text: #c53030;
-  --text-soft: #5b6b7f;
-  --success: #38a169;
-  --shadow: 0 4px 6px rgba(0, 0, 0, 0.07);
-  --shadow-hover: 0 8px 15px rgba(0, 0, 0, 0.1);
+  color-scheme: light dark;
+
+  /* Superfícies e texto */
+  --bg: light-dark(#fbf8f3, #101820);
+  --bg-card: light-dark(#ffffff, #1a232c);
+  --text: light-dark(#14202b, #e9e4db);
+  --text-light: light-dark(#5a6672, #a9b2bc);
+  --text-soft: light-dark(#5a6672, #a9b2bc);
+
+  /* Marca */
+  --primary: light-dark(#16324a, #8fb4d9);
+  --primary-light: light-dark(#1f4160, #a9c6e4);
+  --accent: light-dark(#b04a2a, #d9764f);
+  --accent-hover: light-dark(#963d22, #e28a66);
+  --on-accent: light-dark(#ffffff, #101820);
+  --ochre: light-dark(#d9a343, #d9a343);
+
+  /* Linhas */
+  --border: light-dark(#e5dfd5, #2a3540);
+  --border-strong: light-dark(#76818e, #8a94a0);
+
+  /* Estados */
+  --error: light-dark(#b42318, #fca5a5);
+  --error-text: light-dark(#8f1d14, #fecaca);
+  --success: light-dark(#2f7d4f, #6ee7a8);
+
+  /* Elevação — derivada do texto, portanto acompanha o tema */
+  --shadow: 0 4px 6px color-mix(in srgb, var(--text) 10%, transparent);
+  --shadow-hover: 0 8px 15px color-mix(in srgb, var(--text) 14%, transparent);
+
+  /* Forma e movimento */
   --radius: 12px;
   --radius-sm: 8px;
   --transition: 0.2s ease;
+
+  /* Ícones */
   --icon-size: 20px;
   --icon-size-sm: 14px;
   --icon-size-lg: 48px;
   --icon-color: var(--text-light);
-  /* Canais RGB usados em rgba(--nome-rgb, alpha) */
-  --bg-card-rgb: 255, 255, 255;
-  --border-rgb: 226, 232, 240;
-  --primary-rgb: 30, 58, 95;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --primary: #2d5a8a;
-    --primary-light: #3d6ba8;
-    --accent: #f0b848;
-    --accent-hover: #e8a838;
-    --bg: #1a202c;
-    --bg-card: #2d3748;
-    --text: #e2e8f0;
-    --text-light: #a0aec0;
-    --border: #4a5568;
-    --error-text: #fca5a5;
-    --text-soft: #b6c2d1;
-    --shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-    --shadow-hover: 0 8px 15px rgba(0, 0, 0, 0.4);
-    --bg-card-rgb: 45, 55, 72;
-    --border-rgb: 74, 85, 104;
-    --primary-rgb: 45, 90, 138;
-  }
 }
 
 :root[data-tema="claro"] {
-  --primary: #1e3a5f;
-  --primary-light: #2d5a8a;
-  --accent: #e8a838;
-  --accent-hover: #d4962e;
-  --bg: #f8f9fa;
-  --bg-card: #ffffff;
-  --text: #2d3748;
-  --text-light: #718096;
-  --border: #e2e8f0;
-  --error-text: #c53030;
-  --text-soft: #5b6b7f;
-  --shadow: 0 4px 6px rgba(0, 0, 0, 0.07);
-  --shadow-hover: 0 8px 15px rgba(0, 0, 0, 0.1);
-  --bg-card-rgb: 255, 255, 255;
-  --border-rgb: 226, 232, 240;
-  --primary-rgb: 30, 58, 95;
+  color-scheme: light;
 }
 
 :root[data-tema="noturno"] {
-  --primary: #2d5a8a;
-  --primary-light: #3d6ba8;
-  --accent: #f0b848;
-  --accent-hover: #e8a838;
-  --bg: #1a202c;
-  --bg-card: #2d3748;
-  --text: #e2e8f0;
-  --text-light: #a0aec0;
-  --border: #4a5568;
-  --error-text: #fca5a5;
-  --text-soft: #b6c2d1;
-  --shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-  --shadow-hover: 0 8px 15px rgba(0, 0, 0, 0.4);
-  --bg-card-rgb: 45, 55, 72;
-  --border-rgb: 74, 85, 104;
-  --primary-rgb: 45, 90, 138;
+  color-scheme: dark;
 }
