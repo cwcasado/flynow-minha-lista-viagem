@@ -71,16 +71,7 @@ export default function Login() {
       <section className="login-form-col" aria-labelledby="login-titulo">
         <div className="login-card">
           <div className="login-brand">
-            <img
-              src="/flynow-logo-176.png"
-              srcSet="/flynow-logo-88.png 1x, /flynow-logo-176.png 2x"
-              width={88}
-              height={88}
-              alt="FlyNow Viagens"
-              className="login-logo"
-              aria-hidden="true"
-            />
-            <span className="login-brand-name">FlyNow</span>
+            <span className="login-logo" role="img" aria-label="FlyNow Viagens" />
           </div>
 
           <p className="login-kicker">Minha Lista de Viagem</p>

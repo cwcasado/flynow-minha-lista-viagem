@@ -185,13 +185,36 @@ a:hover {
 .brand-mark {
   display: flex;
   align-items: center;
-  height: 64px;
+  height: 44px;
+}
+
+/* A logo é um lockup horizontal (globo + FlyNow + Viagens): 176x65.
+   Fica como background para trocar de arte junto com o tema — no noturno o
+   azul-marinho original ficaria a 1,3:1 sobre o card. */
+.brand-logo,
+.login-logo {
+  display: block;
+  background-image: url("/flynow-logo-176.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+:root[data-tema="noturno"] .brand-logo,
+:root[data-tema="noturno"] .login-logo {
+  background-image: url("/flynow-logo-escuro-176.png");
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-tema="claro"]) .brand-logo,
+  :root:not([data-tema="claro"]) .login-logo {
+    background-image: url("/flynow-logo-escuro-176.png");
+  }
 }
 
 .brand-logo {
-  height: 100%;
-  width: auto;
-  object-fit: contain;
+  height: 44px;
+  width: 119px;
 }
 
 /* Logo sem efeitos: a marca aparece por contraste, nao por brilho. */

@@ -92,6 +92,9 @@ Exercícios/     material das aulas (fora do controle de versão)
   `<html>` vencendo a preferência do sistema.
 - **Tipografia**: Fraunces (display) e Inter (texto), self-hosted via Fontsource — só o eixo
   de peso e o subset latino são baixados (~83 KB).
+- **Logo**: lockup horizontal (176×65). É um `background` para trocar de arte com o tema: no
+  noturno a versão `flynow-logo-escuro` deixa os pixels frios em creme e mantém o âmbar, porque
+  o azul-marinho original fica a 1,3:1 sobre o card escuro.
 - **Verificação** (rodar antes de commit):
 
   ```bash

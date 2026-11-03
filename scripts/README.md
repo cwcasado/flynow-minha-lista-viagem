@@ -22,7 +22,7 @@ Hoje são **26 destinos × 6 fotos = 156 fotos**.
 | `verificar-tokens.mjs` | Garante que todo token `--*` usado em `src/styles/tokens.css`, `src/styles/login.css` e `src/index.css` está definido ali. |
 | `verificar-contraste.mjs` | Calcula os 24 pares de cor do design system e falha abaixo de 4,5:1 (texto) ou 3:1 (borda/foco). |
 | `verificar-assets.mjs` | Confere logos otimizados, pacotes de fonte, import de `fontes.css` e uso de `srcSet`/`width`/`height` nas logos. |
-| `otimizar-logo.ps1` | Redimensiona `public/flynow-logo-transparente.png` para 88 px e 176 px (2,9 MB → 5,7 KB e 16,5 KB). |
+| `otimizar-logo.ps1` | Recorta o padding transparente, gera `flynow-logo-{88,176}.png` na proporção original (2,9 MB → 5,1 KB e 14,5 KB) e a variante noturna `flynow-logo-escuro-{88,176}.png` (pixels frios em creme, âmbar preservado). |
 | `verificacao-fotos.json` | Última verificação: 156 registros `{destino, arquivo, url, categoria}`. |
 
 ## Como regerar

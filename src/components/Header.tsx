@@ -30,14 +30,7 @@ export function Header() {
       <div className="header-brand">
         <div className="brand">
           <div className="brand-mark" aria-hidden="true">
-            <img
-              src="/flynow-logo-176.png"
-              srcSet="/flynow-logo-88.png 1x, /flynow-logo-176.png 2x"
-              width={88}
-              height={88}
-              alt="FlyNow Viagens"
-              className="brand-logo"
-            />
+            <span className="brand-logo" role="img" aria-label="FlyNow Viagens" />
           </div>
         </div>
 
