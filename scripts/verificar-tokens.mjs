@@ -8,6 +8,13 @@ const EXIGIDOS = [
   "--error", "--error-text", "--success", "--shadow", "--shadow-hover",
   "--radius", "--radius-sm", "--transition",
   "--icon-size", "--icon-size-sm", "--icon-size-lg", "--icon-color",
+  "--space-1", "--space-2", "--space-3", "--space-4", "--space-5",
+  "--space-6", "--space-7", "--space-8", "--space-9",
+  "--fs-display", "--fs-h1", "--fs-h2", "--fs-body", "--fs-sm", "--fs-xs", "--fs-kicker",
+  "--radius-lg", "--radius-pill",
+  "--elev-1", "--elev-2", "--elev-3",
+  "--dur-fast", "--dur", "--dur-slow", "--ease",
+  "--font-display", "--font-text",
 ];
 
 function ler(caminho) {

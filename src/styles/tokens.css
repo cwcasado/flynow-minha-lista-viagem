@@ -33,14 +33,47 @@
   --error-text: light-dark(#8f1d14, #fecaca);
   --success: light-dark(#2f7d4f, #6ee7a8);
 
+  /* Escala de espaço */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+  --space-8: 64px;
+  --space-9: 96px;
+
+  /* Escala tipográfica */
+  --fs-display: clamp(2.25rem, 4.5vw, 3.5rem);
+  --fs-h1: clamp(1.75rem, 3vw, 2.25rem);
+  --fs-h2: clamp(1.375rem, 2.2vw, 1.75rem);
+  --fs-body: 1rem;
+  --fs-sm: 0.875rem;
+  --fs-xs: 0.75rem;
+  --fs-kicker: 0.6875rem;
+
+  /* Famílias — ver src/styles/fontes.css */
+  --font-display: "Fraunces Variable", ui-serif, Georgia, serif;
+  --font-text: "Inter Variable", -apple-system, "Segoe UI", Roboto, sans-serif;
+
   /* Elevação — derivada do texto, portanto acompanha o tema */
-  --shadow: 0 4px 6px color-mix(in srgb, var(--text) 10%, transparent);
-  --shadow-hover: 0 8px 15px color-mix(in srgb, var(--text) 14%, transparent);
+  --elev-1: 0 1px 2px color-mix(in srgb, var(--text) 6%, transparent);
+  --elev-2: 0 8px 24px -8px color-mix(in srgb, var(--text) 14%, transparent);
+  --elev-3: 0 24px 64px -24px color-mix(in srgb, var(--text) 22%, transparent);
+  --shadow: var(--elev-1);
+  --shadow-hover: var(--elev-2);
 
   /* Forma e movimento */
   --radius: 12px;
   --radius-sm: 8px;
+  --radius-lg: 16px;
+  --radius-pill: 999px;
   --transition: 0.2s ease;
+  --dur-fast: 120ms;
+  --dur: 200ms;
+  --dur-slow: 320ms;
+  --ease: cubic-bezier(0.2, 0.8, 0.2, 1);
 
   /* Ícones */
   --icon-size: 20px;
