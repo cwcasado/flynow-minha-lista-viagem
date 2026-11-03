@@ -91,7 +91,10 @@ export default function Login() {
                 name="username"
                 type="text"
                 value={username}
-                onChange={(e) => setUsername(e.target.value)}
+                onChange={(e) => {
+                  setUsername(e.target.value);
+                  if (erro) setErro(null);
+                }}
                 placeholder=" "
                 autoComplete="username"
                 autoCapitalize="none"
@@ -109,7 +112,10 @@ export default function Login() {
                 name="password"
                 type={mostrarSenha ? "text" : "password"}
                 value={senha}
-                onChange={(e) => setSenha(e.target.value)}
+                onChange={(e) => {
+                  setSenha(e.target.value);
+                  if (erro) setErro(null);
+                }}
                 placeholder=" "
                 autoComplete="current-password"
                 disabled={enviando}
