@@ -1,0 +1,93 @@
+/* ============================================================
+   Tokens de design — fonte única de verdade.
+   Tema claro por padrão, noturno por prefers-color-scheme e por
+   [data-tema] definido em <html> (ver DestinosContext).
+   ============================================================ */
+
+:root {
+  --primary: #1e3a5f;
+  --primary-light: #2d5a8a;
+  --accent: #e8a838;
+  --accent-hover: #d4962e;
+  --bg: #f8f9fa;
+  --bg-card: #ffffff;
+  --text: #2d3748;
+  --text-light: #718096;
+  --border: #e2e8f0;
+  --error: #e53e3e;
+  --error-text: #c53030;
+  --text-soft: #5b6b7f;
+  --success: #38a169;
+  --shadow: 0 4px 6px rgba(0, 0, 0, 0.07);
+  --shadow-hover: 0 8px 15px rgba(0, 0, 0, 0.1);
+  --radius: 12px;
+  --radius-sm: 8px;
+  --transition: 0.2s ease;
+  --icon-size: 20px;
+  --icon-size-sm: 14px;
+  --icon-size-lg: 48px;
+  --icon-color: var(--text-light);
+  /* Canais RGB usados em rgba(--nome-rgb, alpha) */
+  --bg-card-rgb: 255, 255, 255;
+  --border-rgb: 226, 232, 240;
+  --primary-rgb: 30, 58, 95;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --primary: #2d5a8a;
+    --primary-light: #3d6ba8;
+    --accent: #f0b848;
+    --accent-hover: #e8a838;
+    --bg: #1a202c;
+    --bg-card: #2d3748;
+    --text: #e2e8f0;
+    --text-light: #a0aec0;
+    --border: #4a5568;
+    --error-text: #fca5a5;
+    --text-soft: #b6c2d1;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    --shadow-hover: 0 8px 15px rgba(0, 0, 0, 0.4);
+    --bg-card-rgb: 45, 55, 72;
+    --border-rgb: 74, 85, 104;
+    --primary-rgb: 45, 90, 138;
+  }
+}
+
+:root[data-tema="claro"] {
+  --primary: #1e3a5f;
+  --primary-light: #2d5a8a;
+  --accent: #e8a838;
+  --accent-hover: #d4962e;
+  --bg: #f8f9fa;
+  --bg-card: #ffffff;
+  --text: #2d3748;
+  --text-light: #718096;
+  --border: #e2e8f0;
+  --error-text: #c53030;
+  --text-soft: #5b6b7f;
+  --shadow: 0 4px 6px rgba(0, 0, 0, 0.07);
+  --shadow-hover: 0 8px 15px rgba(0, 0, 0, 0.1);
+  --bg-card-rgb: 255, 255, 255;
+  --border-rgb: 226, 232, 240;
+  --primary-rgb: 30, 58, 95;
+}
+
+:root[data-tema="noturno"] {
+  --primary: #2d5a8a;
+  --primary-light: #3d6ba8;
+  --accent: #f0b848;
+  --accent-hover: #e8a838;
+  --bg: #1a202c;
+  --bg-card: #2d3748;
+  --text: #e2e8f0;
+  --text-light: #a0aec0;
+  --border: #4a5568;
+  --error-text: #fca5a5;
+  --text-soft: #b6c2d1;
+  --shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  --shadow-hover: 0 8px 15px rgba(0, 0, 0, 0.4);
+  --bg-card-rgb: 45, 55, 72;
+  --border-rgb: 74, 85, 104;
+  --primary-rgb: 45, 90, 138;
+}

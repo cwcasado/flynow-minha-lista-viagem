@@ -4,6 +4,7 @@ import App from "./App";
 import { AuthProvider } from "./contexts/AuthContext";
 import { DestinosProvider } from "./contexts/DestinosContext";
 import ErrorBoundary, { instalarOverlayGlobalDeErros } from "./components/ErrorBoundary";
+import "./styles/tokens.css";
 import "./index.css";
 
 // Mostra erros de runtime não capturados como um balão na tela

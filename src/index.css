@@ -1,47 +1,5 @@
-/* Reset e variáveis globais para FlyNow */
-
-:root {
-  --primary: #1e3a5f;
-  --primary-light: #2d5a8a;
-  --accent: #e8a838;
-  --accent-hover: #d4962e;
-  --bg: #f8f9fa;
-  --bg-card: #ffffff;
-  --text: #2d3748;
-  --text-light: #718096;
-  --border: #e2e8f0;
-  --error: #e53e3e;
-  --error-text: #c53030;
-  --text-soft: #5b6b7f;
-  --success: #38a169;
-  --shadow: 0 4px 6px rgba(0, 0, 0, 0.07);
-  --shadow-hover: 0 8px 15px rgba(0, 0, 0, 0.1);
-  --radius: 12px;
-  --radius-sm: 8px;
-  --transition: 0.2s ease;
-  --icon-size: 20px;
-  --icon-size-sm: 14px;
-  --icon-size-lg: 48px;
-  --icon-color: var(--text-light);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --primary: #2d5a8a;
-    --primary-light: #3d6ba8;
-    --accent: #f0b848;
-    --accent-hover: #e8a838;
-    --bg: #1a202c;
-    --bg-card: #2d3748;
-    --text: #e2e8f0;
-    --text-light: #a0aec0;
-    --border: #4a5568;
-    --error-text: #fca5a5;
-    --text-soft: #b6c2d1;
-    --shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-    --shadow-hover: 0 8px 15px rgba(0, 0, 0, 0.4);
-  }
-}
+﻿/* Reset e regras globais para FlyNow.
+   Tokens de design vivem em src/styles/tokens.css. */
 
 /* ============================================================
    Ícones do sistema (substituem emojis)
@@ -192,32 +150,24 @@ a:hover {
 }
 
 .brand-mark {
-  width: 48px;
-  height: 48px;
+  display: flex;
+  align-items: center;
+  height: 110px;
 }
 
 .brand-logo {
-  width: 100%;
   height: 100%;
+  width: auto;
   object-fit: contain;
 }
 
+/* Contorno dourado leve da logo no modo noturno */
+:root[data-tema="noturno"] .brand-logo {
+  filter: drop-shadow(0 0 2px rgba(240, 184, 72, 0.55)) drop-shadow(0 0 6px rgba(240, 184, 72, 0.25));
+}
+
 .brand-text {
-  display: flex;
-  flex-direction: column;
-}
-
-.brand-title {
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: var(--primary);
-  margin: 0;
-}
-
-.brand-subtitle {
-  font-size: 0.9rem;
-  color: var(--text-light);
-  margin: 0;
+  display: none;
 }
 
 .brand-actions {
@@ -247,6 +197,83 @@ a:hover {
   font-size: 1.1rem;
 }
 
+/* ---------- Carrossel de destaques no header ---------- */
+.destaques {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  width: 320px;
+  padding: 0.35rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--bg);
+  overflow: hidden;
+}
+.destaques-media {
+  flex-shrink: 0;
+  width: 64px;
+  height: 64px;
+  border-radius: calc(var(--radius-sm) - 2px);
+  overflow: hidden;
+}
+.destaques-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.destaques-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.15rem;
+  min-width: 0;
+  flex: 1;
+}
+.destaques-categoria {
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent-hover);
+}
+.destaques-nome {
+  font-size: 0.82rem;
+  line-height: 1.2;
+  color: var(--text);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.destaques-controles {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+.destaques-seta {
+  display: grid;
+  place-items: center;
+  width: 26px;
+  height: 26px;
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  background: transparent;
+  color: var(--text);
+  cursor: pointer;
+  transition: background var(--transition), color var(--transition);
+}
+.destaques-seta:hover { background: var(--primary); color: #fff; }
+.destaques-seta:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.destaques-ponto {
+  font-size: 0.68rem;
+  color: var(--text);
+  font-variant-numeric: tabular-nums;
+}
+
+@media (max-width: 900px) {
+  .destaques { display: none; }
+}
+
 .theme-toggle {
   background: transparent;
   border: 2px solid var(--border);
@@ -268,6 +295,31 @@ a:hover {
 .theme-toggle-dark {
   border-color: var(--accent);
   color: var(--accent);
+}
+
+.btn-logout {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0.875rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--bg);
+  color: var(--text-light);
+  font-size: 0.85rem;
+  font-weight: 500;
+  font-family: inherit;
+  cursor: pointer;
+  transition: all var(--transition);
+}
+.btn-logout:hover {
+  border-color: var(--error);
+  color: var(--error);
+  background: color-mix(in srgb, var(--error) 8%, transparent);
+}
+.btn-logout:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
 }
 
 .header-hero {
@@ -1028,6 +1080,10 @@ a:hover {
     padding: 0.75rem;
   }
 
+  .brand-mark {
+    height: 64px;
+  }
+
   .brand-title {
     font-size: 1.25rem;
   }
@@ -1260,40 +1316,8 @@ a:hover {
 }
 
 /* ============================================================
-   Tema explícito (o botão do header define data-tema no <html>)
+   Tema explícito movido para src/styles/tokens.css
    ============================================================ */
-
-:root[data-tema="claro"] {
-  --primary: #1e3a5f;
-  --primary-light: #2d5a8a;
-  --accent: #e8a838;
-  --accent-hover: #d4962e;
-  --bg: #f8f9fa;
-  --bg-card: #ffffff;
-  --text: #2d3748;
-  --text-light: #718096;
-  --border: #e2e8f0;
-  --error-text: #c53030;
-  --text-soft: #5b6b7f;
-  --shadow: 0 4px 6px rgba(0, 0, 0, 0.07);
-  --shadow-hover: 0 8px 15px rgba(0, 0, 0, 0.1);
-}
-
-:root[data-tema="noturno"] {
-  --primary: #2d5a8a;
-  --primary-light: #3d6ba8;
-  --accent: #f0b848;
-  --accent-hover: #e8a838;
-  --bg: #1a202c;
-  --bg-card: #2d3748;
-  --text: #e2e8f0;
-  --text-light: #a0aec0;
-  --border: #4a5568;
-  --error-text: #fca5a5;
-  --text-soft: #b6c2d1;
-  --shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-  --shadow-hover: 0 8px 15px rgba(0, 0, 0, 0.4);
-}
 
 /* Economia de dados: mantém o painel do tema, sem baixar a foto */
 @media (prefers-reduced-data: reduce) {
@@ -1306,4 +1330,400 @@ a:hover {
     background-image: none;
     background-color: #16202e;
   }
+}
+
+/* ============================================================
+   Login (split) — formulario + painel da foto
+   Tokens: --bg-card, --text, --error, --radius-sm...
+   ============================================================ */
+
+/* Na rota /login o hero (busca + filtros) não aparece. */
+.app:has(.login-page) .header-hero { display: none; }
+
+/* ============================================================
+   Login (split) — design moderno glassmorphism
+   ============================================================ */
+
+/* Variáveis do login */
+.login-page {
+  /* Overlay navy sobre a foto: alphas medidos por scripts/medir-fundo.py */
+  --login-overlay: 8, 18, 28;
+  --login-overlay-topo: 0.9;
+  --login-overlay-meio: 0.58;
+  --login-overlay-base: 0.92;
+  --login-foco: 0 0 0 3px rgba(30, 58, 95, 0.12);
+  /* Borda do campo: 3,49:1 sobre o fundo (WCAG 1.4.11 pede 3:1 em borda de controle) */
+  --login-borda: #7b8794;
+  --login-foco-cor: var(--primary);
+  /* Categoria do card de destaque: 5,16:1 sobre o fundo no tema claro */
+  --login-categoria-cor: #9a5b0d;
+  /* Mesma regra da seção de contato: uma foto por tema. */
+  --login-foto-url: url("/login-hero.jpg");
+  flex: 1;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr);
+  align-items: stretch;
+  gap: 0;
+}
+
+/* Tema claro: foto diurna + crédito próprio. */
+:root[data-tema="claro"] .login-page {
+  --login-foto-url: url("/login-hero-claro.jpg");
+}
+@media (prefers-color-scheme: light) {
+  :root:not([data-tema="noturno"]) .login-page {
+    --login-foto-url: url("/login-hero-claro.jpg");
+  }
+}
+
+/* Tema noturno: borda e rótulo em foco com contraste suficiente. */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-tema="claro"]) .login-page {
+    --login-borda: #718096;
+    --login-foco-cor: var(--accent);
+    --login-categoria-cor: var(--accent);
+  }
+}
+:root[data-tema="noturno"] .login-page {
+  --login-borda: #718096;
+  --login-foco-cor: var(--accent);
+  --login-categoria-cor: var(--accent);
+}
+
+/* ---------- Coluna do formulário (glassmorphism) ---------- */
+.login-form-col {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1.5rem;
+}
+
+.login-card {
+  width: min(420px, 100%);
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  padding: 2.5rem 2rem;
+  background: rgba(var(--bg-card-rgb, 255, 255, 255), 0.85);
+  border: 1px solid rgba(var(--border-rgb, 226, 232, 240), 0.6);
+  border-radius: calc(var(--radius) + 4px);
+  box-shadow:
+    0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06),
+    inset 0 1px 0 rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+/* Dark mode overrides para glassmorphism */
+:root[data-tema="noturno"] .login-card {
+  background: rgba(var(--bg-card-rgb, 45, 55, 72), 0.85);
+  border: 1px solid rgba(var(--border-rgb, 74, 85, 104), 0.6);
+  box-shadow:
+    0 4px 6px -1px rgba(0, 0, 0, 0.3),
+    0 2px 4px -1px rgba(0, 0, 0, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-tema="claro"]) .login-card {
+    background: rgba(var(--bg-card-rgb, 45, 55, 72), 0.85);
+    border: 1px solid rgba(var(--border-rgb, 74, 85, 104), 0.6);
+    box-shadow:
+      0 4px 6px -1px rgba(0, 0, 0, 0.3),
+      0 2px 4px -1px rgba(0, 0, 0, 0.2),
+      inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  }
+}
+
+/* Marca do login (mesma logo do header) */
+.login-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+.login-logo {
+  width: 44px;
+  height: 44px;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+}
+:root[data-tema="noturno"] .login-logo {
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3)) drop-shadow(0 0 8px rgba(240, 184, 72, 0.3));
+}
+.login-brand-name {
+  font-size: 1.25rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.login-titulo {
+  margin: 0;
+  font-size: 1.6rem;
+  line-height: 1.25;
+  font-weight: 700;
+  color: var(--text);
+  letter-spacing: -0.01em;
+}
+.login-sub {
+  margin: 0;
+  color: var(--text-light);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  max-width: 32ch;
+}
+
+.login-erro {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  padding: 0.75rem 1rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--error);
+  background: color-mix(in srgb, var(--error) 10%, transparent);
+  color: var(--error-text);
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+.login-erro svg { flex-shrink: 0; margin-top: 0.125rem; }
+
+/* Campo com label flutuante - design moderno */
+.login-field {
+  position: relative;
+  margin-bottom: 1rem;
+}
+.login-field input {
+  width: 100%;
+  padding: 1.1rem 3rem 0.6rem 1rem;
+  border: 1.5px solid var(--login-borda);
+  border-radius: var(--radius-sm);
+  background: var(--bg);
+  color: var(--text);
+  font-size: 1rem;
+  font-family: inherit;
+  transition: border-color var(--transition), box-shadow var(--transition), background var(--transition);
+}
+.login-field input::placeholder { color: transparent; }
+.login-field input:hover {
+  border-color: color-mix(in srgb, var(--login-borda) 60%, var(--primary));
+}
+.login-field label {
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-light);
+  font-size: 1rem;
+  pointer-events: none;
+  transform-origin: left center;
+  transition: transform var(--transition), font-size var(--transition), color var(--transition);
+}
+.login-field input:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: var(--login-foco);
+  background: var(--bg-card);
+}
+.login-field input:focus + label,
+.login-field input:not(:placeholder-shown) + label {
+  transform: translateY(-1.4rem) scale(0.8);
+  color: var(--login-foco-cor);
+  font-weight: 600;
+}
+.login-field input:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  background: color-mix(in srgb, var(--bg) 80%, transparent);
+}
+
+/* Botão mostrar/ocultar senha */
+.login-olho {
+  position: absolute;
+  right: 0.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: var(--radius-sm);
+  background: transparent;
+  color: var(--text-light);
+  cursor: pointer;
+  transition: color var(--transition), background var(--transition);
+}
+.login-olho:hover {
+  color: var(--primary);
+  background: color-mix(in srgb, var(--primary) 8%, transparent);
+}
+.login-olho:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+.login-olho:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Botões */
+.btn {
+  padding: 0.875rem 1.5rem;
+  border-radius: var(--radius-sm);
+  border: none;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--transition);
+}
+.btn-primary {
+  background: linear-gradient(135deg, var(--primary), var(--primary-light));
+  color: #fff;
+  box-shadow: 0 2px 4px rgba(var(--primary-rgb, 30, 58, 95), 0.3);
+}
+.btn-primary:hover {
+  background: linear-gradient(135deg, var(--primary-light), var(--primary));
+  box-shadow: 0 4px 12px rgba(var(--primary-rgb, 30, 58, 95), 0.4);
+  transform: translateY(-1px);
+}
+.btn-primary:active { transform: translateY(0); }
+.btn-primary:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+.btn-primary:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.login-teste {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  margin-top: 0.5rem;
+  padding: 0.6rem 1rem;
+  min-height: 44px;
+  border: 1px solid var(--login-borda);
+  border-radius: var(--radius-sm);
+  background: transparent;
+  color: var(--text-light);
+  font-size: 0.85rem;
+  font-weight: 500;
+  font-family: inherit;
+  cursor: pointer;
+  transition: all var(--transition);
+}
+.login-teste:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+  background: color-mix(in srgb, var(--primary) 5%, transparent);
+}
+.login-teste:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+.login-teste:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* ---------- Painel da foto (simples, troca por tema) ---------- */
+.login-foto {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding: 3rem;
+  color: #fff;
+  background-color: #08121c;
+  background-image:
+    linear-gradient(
+      180deg,
+      rgba(var(--login-overlay), var(--login-overlay-topo)) 0%,
+      rgba(var(--login-overlay), 0.74) 26%,
+      rgba(var(--login-overlay), var(--login-overlay-meio)) 50%,
+      rgba(var(--login-overlay), var(--login-overlay-meio)) 74%,
+      rgba(var(--login-overlay), 0.88) 84%,
+      rgba(var(--login-overlay), var(--login-overlay-base)) 100%
+    ),
+    var(--login-foto-url);
+  background-size: cover, cover;
+  background-position: center, center 30%;
+  background-repeat: no-repeat;
+}
+
+.login-foto-texto {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+.login-foto-kicker {
+  margin: 0;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.82);
+}
+.login-foto-titulo {
+  margin: 0;
+  font-size: 2.25rem;
+  line-height: 1.1;
+  font-weight: 800;
+  color: #fff;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+.login-foto-sub {
+  margin: 0;
+  max-width: 36ch;
+  line-height: 1.6;
+  color: rgba(238, 243, 250, 0.92);
+  font-size: 1.05rem;
+}
+.login-foto-credito {
+  margin: 0;
+  font-size: 0.72rem;
+  color: rgba(203, 213, 225, 0.9);
+}
+
+/* ---------- Telas pequenas ---------- */
+@media (max-width: 900px) {
+  .login-page { grid-template-columns: 1fr; }
+  .login-form-col { order: 2; padding: 1.5rem 1rem 2rem; }
+  .login-card { padding: 2rem 1.5rem; }
+  .login-foto {
+    order: 1;
+    min-height: 220px;
+    padding: 1.5rem;
+  }
+  .login-foto-titulo { font-size: 1.5rem; }
+  .login-foto-sub { display: none; }
+  .login-foto-credito { font-size: 0.66rem; }
+}
+
+@media (max-width: 480px) {
+  .login-page { grid-template-columns: 1fr; }
+  .login-card { padding: 1.5rem 1.25rem; }
+  .login-foto { min-height: 180px; }
+  .login-foto-titulo { font-size: 1.25rem; }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .login-field label,
+  .login-field input,
+  .login-olho,
+  .login-teste,
+  .btn { transition: none !important; }
+}
+
+@media (max-width: 480px) {
+  .login-head { justify-content: flex-start; }
 }
