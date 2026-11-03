@@ -11,14 +11,16 @@ categoria, buscar por nome/descrição e alternar tema claro/noturno.
 - **React 19** + **Vite 8** + **TypeScript** (`strict`)
 - **react-router-dom 7** — rotas `/`, `/login`, `/desejos`, `*`
 - **axios** — login e CRUD na API DummyJSON
+- **Vitest + Testing Library** — testes de comportamento
 - **oxlint** — lint
-- CSS puro com design system em variáveis (`src/index.css`)
+- CSS puro com design system em variáveis (`src/styles/tokens.css`)
 
 ## Como rodar
 
 ```bash
 npm install
 npm run dev      # http://localhost:5173
+npm run test     # vitest run
 npm run build    # tsc -b && vite build
 npm run lint     # oxlint
 npm run preview  # serve o build
@@ -38,6 +40,8 @@ Login de teste (DummyJSON): usuário `emilys`, senha `emilyspass`.
 | Tema claro/noturno persistido (`flynow-tema`, `data-tema` no `<html>`) | `DestinosContext` + CSS |
 | Textos vindos da Wikipedia (consulta em lotes de 20 títulos), fotos e categorias locais | merge em `DestinosContext` |
 | Foto de fundo na seção de contato, uma por tema | `public/fundo-contato*.jpg` + `.form-section` |
+| Login em split: formulário sólido à esquerda, painel de foto com números reais do catálogo à direita (foto troca por tema) | `src/pages/Login.tsx`, `src/styles/login.css`, `public/login-hero*.jpg` |
+| Senha com mostrar/ocultar, botão de credenciais de teste e erro acessível | `src/pages/Login.tsx` |
 | Login, rota protegida e CRUD de desejos | `AuthContext`, `ProtectedRoute`, `pages/Desejos.tsx` |
 
 ## Categorias
@@ -70,14 +74,46 @@ src/
   components/   Header, DestinoCard (carrossel), DestinoLista, DestinoForm, DesejoItem, ErrorBoundary
   contexts/     AuthContext, DestinosContext
   data/         destinos.ts (gerado), categorias.ts
-  pages/        Destinos, Login, Desejos, NaoEncontrada
-  routes/       ProtectedRoute
+  pages/        Destinos, Login (+ Login.test), Desejos, NaoEncontrada
+  routes/       ProtectedRoute (+ teste)
   services/     desejos.ts
+  styles/       tokens.css (fonte única), fontes.css, login.css
+  test/         setup do Vitest
   utils/        erros.ts
-public/         logos e fotos de fundo da seção de contato (claro e noturno)
-scripts/        pipeline de curadoria e validação das fotos
+public/         logos otimizados, fotos de fundo do contato e do login (claro e noturno)
+scripts/        curadoria das fotos + verificadores de tokens, contraste e assets
 Exercícios/     material das aulas (fora do controle de versão)
 ```
+
+## Design system
+
+- **Tokens** em `src/styles/tokens.css` — cores, espaço, tipografia, raio, elevação e movimento.
+  Tema claro/noturno resolvido por `color-scheme` + `light-dark()`, com o `data-tema` do
+  `<html>` vencendo a preferência do sistema.
+- **Tipografia**: Fraunces (display) e Inter (texto), self-hosted via Fontsource — só o eixo
+  de peso e o subset latino são baixados (~83 KB).
+- **Verificação** (rodar antes de commit):
+
+  ```bash
+  node scripts/verificar-tokens.mjs     # integridade dos tokens + uso sem definição
+  node scripts/verificar-contraste.mjs  # pares de cor WCAG AA (4,5:1 texto, 3:1 borda/foco)
+  node scripts/verificar-assets.mjs     # logos, fontes e uso de srcSet/width/height
+  npm test
+  ```
+
+## Login
+
+Página em **split**: o formulário fica à esquerda, num card sólido, e à direita um painel com
+foto de destino e os números do catálogo (26 destinos, 156 fotos, 8 categorias). A imagem troca
+junto com o tema.
+
+- Foto do noturno: Rio ao pôr do sol visto do Pão de Açúcar — Adam Jones, CC BY-SA 3.0
+- Foto do claro: Balneário Camboriú visto do Parque Unipraias — Trustable, CC BY-SA 4.0
+- Autofoco no campo de usuário só quando há mouse (`hover: hover`), para não abrir teclado no toque
+- Erro de credenciais anunciado com `role="alert"` e limpo assim que a pessoa volta a digitar
+- O contraste dos pares de cor é medido por `node scripts/verificar-contraste.mjs`
+
+Regenerar as fotos do login: `python scripts/baixar-login-hero.py`.
 
 ## Limitações conhecidas
 
