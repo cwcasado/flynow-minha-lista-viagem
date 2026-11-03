@@ -4,6 +4,7 @@ import App from "./App";
 import { AuthProvider } from "./contexts/AuthContext";
 import { DestinosProvider } from "./contexts/DestinosContext";
 import ErrorBoundary, { instalarOverlayGlobalDeErros } from "./components/ErrorBoundary";
+import "./styles/fontes.css";
 import "./styles/tokens.css";
 import "./index.css";
 

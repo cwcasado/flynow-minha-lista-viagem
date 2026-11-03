@@ -1,14 +1,11 @@
 import { CATEGORIAS } from "../data/categorias";
+import { useAuth } from "../contexts/AuthContext";
 import { useDestinos } from "../contexts/DestinosContext";
 import { Icon } from "./Icon";
 import type { Categoria } from "../types";
 
-type HeaderProps = {
-  titulo: string;
-  subtitulo: string;
-};
-
-export function Header({ titulo, subtitulo }: HeaderProps) {
+export function Header() {
+  const { usuario, logout } = useAuth();
   const {
     busca,
     setBusca,
@@ -33,11 +30,14 @@ export function Header({ titulo, subtitulo }: HeaderProps) {
       <div className="header-brand">
         <div className="brand">
           <div className="brand-mark" aria-hidden="true">
-            <img src="/logo-brand.svg" alt="" className="brand-logo" width="48" height="48" />
-          </div>
-          <div className="brand-text">
-            <h1 className="brand-title">{titulo}</h1>
-            <p className="brand-subtitle">{subtitulo}</p>
+            <img
+              src="/flynow-logo-176.png"
+              srcSet="/flynow-logo-88.png 1x, /flynow-logo-176.png 2x"
+              width={88}
+              height={88}
+              alt="FlyNow Viagens"
+              className="brand-logo"
+            />
           </div>
         </div>
 
@@ -50,6 +50,17 @@ export function Header({ titulo, subtitulo }: HeaderProps) {
             <Icon name="favorito" size={16} className="stat-icon" />
             <span><strong>{minhaLista.length}</strong> salvos</span>
           </div>
+          {usuario && (
+            <button
+              type="button"
+              className="btn-logout"
+              onClick={logout}
+              aria-label="Sair da conta"
+            >
+              <Icon name="sair" size={16} />
+              <span>Sair</span>
+            </button>
+          )}
           <button
             type="button"
             className={`theme-toggle ${noturno ? "theme-toggle-dark" : ""}`}
