@@ -1,6 +1,7 @@
-import { useEffect, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
 import { CATEGORIA_PADRAO, iconeDaCategoria } from "../data/categorias";
 import { Icon } from "./Icon";
+import { Lightbox } from "./Lightbox";
 import type { Destino, Foto } from "../types";
 
 type Props = {
@@ -39,6 +40,7 @@ export function DestinoCard({ destino, estaNaLista, onToggle }: Props) {
   const [indice, setIndice] = useState(0);
   const [carregada, setCarregada] = useState<string | null>(null);
   const [falhas, setFalhas] = useState<Record<string, boolean>>({});
+  const [ampliando, setAmpliando] = useState(false);
 
   // Ao trocar de destino (filtros), volta para a primeira foto.
   useEffect(() => {
@@ -54,6 +56,8 @@ export function DestinoCard({ destino, estaNaLista, onToggle }: Props) {
     if (total === 0) return;
     setIndice((posicao + total) % total);
   };
+
+  const fecharLightbox = useCallback(() => setAmpliando(false), []);
 
   const aoTeclar = (evento: React.KeyboardEvent<HTMLDivElement>) => {
     if (total < 2) return;
@@ -101,6 +105,17 @@ export function DestinoCard({ destino, estaNaLista, onToggle }: Props) {
         )}
 
         <div className="card-overlay" />
+
+        {foto && !falhou && (
+          <button
+            type="button"
+            className="card-zoom"
+            onClick={() => setAmpliando(true)}
+            aria-label={`Ampliar foto de ${destino.nome}`}
+          >
+            <Icon name="expandir" size={20} />
+          </button>
+        )}
 
         {foto && (
           <span className="card-category">
@@ -175,6 +190,17 @@ export function DestinoCard({ destino, estaNaLista, onToggle }: Props) {
           )}
         </div>
       </div>
+
+      {ampliando && foto && !falhou && (
+        <Lightbox
+          url={foto.url}
+          titulo={`${destino.nome} — ${foto.titulo}`}
+          aoFechar={fecharLightbox}
+          aoAnterior={total > 1 ? () => irPara(indiceAtual - 1) : undefined}
+          aoProxima={total > 1 ? () => irPara(indiceAtual + 1) : undefined}
+          contador={total > 1 ? `${indiceAtual + 1}/${total}` : undefined}
+        />
+      )}
     </article>
   );
 }

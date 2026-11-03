@@ -42,6 +42,7 @@ Login de teste (DummyJSON): usuário `emilys`, senha `emilyspass`.
 | Foto de fundo na seção de contato, uma por tema | `public/fundo-contato*.jpg` + `.form-section` |
 | Login em split: formulário sólido à esquerda, painel de foto com números reais do catálogo à direita (foto troca por tema) | `src/pages/Login.tsx`, `src/styles/login.css`, `public/login-hero*.jpg` |
 | Senha com mostrar/ocultar, botão de credenciais de teste e erro acessível | `src/pages/Login.tsx` |
+| Ampliar foto: lightbox centralizado com navegação entre as fotos do destino, fecha por ESC/✕/clique fora | `src/components/Lightbox.tsx`, `src/styles/lightbox.css` |
 | Login, rota protegida e CRUD de desejos | `AuthContext`, `ProtectedRoute`, `pages/Desejos.tsx` |
 
 ## Categorias
@@ -120,6 +121,6 @@ Regenerar as fotos do login: `python scripts/baixar-login-hero.py`.
 
 ## Limitações conhecidas
 
-- Sem modal/lightbox e sem upload de fotos (fora de escopo).
+- Sem upload de fotos (fora de escopo).
 - A busca na Wikipedia acontece em runtime; se falhar, o catálogo local assume com um aviso discreto.
 - Projeto usa `localStorage` (sem backend próprio).
