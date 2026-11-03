@@ -31,6 +31,7 @@
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
   box-shadow: var(--elev-2);
+  animation: surgir var(--dur-slow) var(--ease) both;
 }
 
 .login-brand {
