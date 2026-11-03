@@ -1,0 +1,410 @@
+/* ============================================================
+   Login — composição editorial: formulário sólido à esquerda,
+   foto com números reais do catálogo à direita.
+   Depende apenas de src/styles/tokens.css.
+   ============================================================ */
+
+.login-page {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 55fr 45fr;
+  align-items: stretch;
+  background: var(--bg);
+}
+
+/* ---------- Coluna do formulário ---------- */
+.login-form-col {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-7) var(--space-5);
+  overflow-y: auto;
+}
+
+.login-card {
+  width: min(440px, 100%);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  padding: var(--space-6);
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--elev-2);
+}
+
+.login-brand {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.login-logo {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.login-brand-name {
+  font-family: var(--font-display);
+  font-size: 1.375rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--text);
+}
+
+.login-kicker {
+  margin: 0;
+  font-size: var(--fs-kicker);
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.login-titulo {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: var(--fs-h1);
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  color: var(--text);
+}
+
+.login-sub {
+  margin: 0;
+  max-width: 38ch;
+  font-size: var(--fs-sm);
+  line-height: 1.6;
+  color: var(--text-light);
+}
+
+/* ---------- Erro ---------- */
+.login-erro {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-2);
+  margin: 0;
+  padding: var(--space-3) var(--space-4);
+  border: 1px solid var(--error);
+  border-radius: var(--radius-sm);
+  background: color-mix(in srgb, var(--error) 8%, transparent);
+  color: var(--error-text);
+  font-size: var(--fs-sm);
+  line-height: 1.5;
+}
+
+.login-erro svg {
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+/* ---------- Campos ---------- */
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  margin-top: var(--space-2);
+}
+
+.login-field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.login-field label {
+  font-size: var(--fs-xs);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: var(--text);
+}
+
+.login-input-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.login-field input {
+  width: 100%;
+  height: 48px;
+  padding: 0 var(--space-4);
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius);
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-text);
+  font-size: var(--fs-body);
+  transition:
+    border-color var(--dur) var(--ease),
+    box-shadow var(--dur) var(--ease),
+    background-color var(--dur) var(--ease);
+}
+
+.login-field input:hover:not(:disabled) {
+  border-color: color-mix(in srgb, var(--text) 35%, var(--border-strong));
+}
+
+.login-field input:focus {
+  outline: none;
+  border-color: var(--accent);
+  background: var(--bg-card);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent) 28%, transparent);
+}
+
+.login-field input[aria-invalid="true"] {
+  border-color: var(--error);
+}
+
+.login-field input:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.login-field-senha input {
+  padding-right: 52px;
+}
+
+.login-olho {
+  position: absolute;
+  right: var(--space-1);
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: var(--radius-sm);
+  background: transparent;
+  color: var(--text-light);
+  cursor: pointer;
+  transition:
+    color var(--dur) var(--ease),
+    background-color var(--dur) var(--ease);
+}
+
+.login-olho:hover:not(:disabled) {
+  color: var(--accent);
+  background: color-mix(in srgb, var(--accent) 10%, transparent);
+}
+
+.login-olho:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* ---------- Ações ---------- */
+.login-submit {
+  width: 100%;
+  height: 48px;
+  border: none;
+  border-radius: var(--radius);
+  background: var(--accent);
+  color: var(--on-accent);
+  font-family: var(--font-text);
+  font-size: var(--fs-body);
+  font-weight: 600;
+  box-shadow: var(--elev-1);
+  cursor: pointer;
+  transition:
+    background-color var(--dur) var(--ease),
+    transform var(--dur-fast) var(--ease);
+}
+
+.login-submit:hover:not(:disabled) {
+  background: var(--accent-hover);
+}
+
+.login-submit:active:not(:disabled) {
+  transform: translateY(1px);
+}
+
+.login-submit:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.login-teste {
+  width: 100%;
+  height: 44px;
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius);
+  background: transparent;
+  color: var(--text-light);
+  font-family: var(--font-text);
+  font-size: var(--fs-sm);
+  font-weight: 500;
+  cursor: pointer;
+  transition:
+    border-color var(--dur) var(--ease),
+    color var(--dur) var(--ease);
+}
+
+.login-teste:hover:not(:disabled) {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.login-teste:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.login-submit:focus-visible,
+.login-teste:focus-visible,
+.login-olho:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* ---------- Painel da foto ---------- */
+.login-painel {
+  --login-foto: url("/login-hero.jpg");
+
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: var(--space-5);
+  padding: var(--space-7);
+  color: #fff;
+  background-color: #0b141d;
+  background-image:
+    linear-gradient(
+      to top,
+      rgb(10 16 24 / 0.88) 0%,
+      rgb(10 16 24 / 0.35) 45%,
+      transparent 75%
+    ),
+    var(--login-foto);
+  background-size: cover, cover;
+  background-position: center, center;
+  background-repeat: no-repeat;
+}
+
+:root[data-tema="claro"] .login-painel {
+  --login-foto: url("/login-hero-claro.jpg");
+}
+
+.login-painel-conteudo {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.login-painel-kicker {
+  margin: 0;
+  font-size: var(--fs-kicker);
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgb(255 255 255 / 0.8);
+}
+
+.login-painel-titulo {
+  margin: 0;
+  max-width: 18ch;
+  font-family: var(--font-display);
+  font-size: var(--fs-display);
+  font-weight: 600;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  color: #fff;
+}
+
+.login-painel-stats {
+  display: flex;
+  gap: var(--space-6);
+  margin: 0;
+  padding-top: var(--space-4);
+  border-top: 1px solid rgb(255 255 255 / 0.25);
+}
+
+.login-painel-stats div {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 2px;
+}
+
+.login-painel-stats dt {
+  font-size: var(--fs-xs);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgb(255 255 255 / 0.75);
+}
+
+.login-painel-stats dd {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+.login-foto-credito {
+  margin: 0;
+  font-size: 0.6875rem;
+  line-height: 1.5;
+  color: rgb(203 213 225 / 0.9);
+}
+
+/* ---------- Telas médias e pequenas ---------- */
+@media (max-width: 1199px) {
+  .login-page {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 900px) {
+  .login-page {
+    grid-template-columns: 1fr;
+  }
+
+  .login-painel {
+    order: -1;
+    min-height: 240px;
+    padding: var(--space-5);
+  }
+
+  .login-painel-titulo {
+    font-size: 1.5rem;
+    max-width: 24ch;
+  }
+
+  .login-painel-stats {
+    display: none;
+  }
+
+  .login-form-col {
+    padding: var(--space-5) var(--space-4);
+  }
+}
+
+@media (max-width: 480px) {
+  .login-painel {
+    min-height: 180px;
+  }
+
+  .login-painel-conteudo {
+    gap: var(--space-2);
+  }
+
+  .login-card {
+    padding: var(--space-5) var(--space-4);
+  }
+}
+
+/* ---------- Movimento reduzido ---------- */
+@media (prefers-reduced-motion: reduce) {
+  .login-field input,
+  .login-olho,
+  .login-submit,
+  .login-teste {
+    transition: none !important;
+  }
+
+  .login-submit:active:not(:disabled) {
+    transform: none;
+  }
+}

@@ -3,6 +3,7 @@ import { useAuth } from "../contexts/AuthContext";
 import { useEffect, useRef, useState, type FormEvent } from "react";
 import { Icon } from "../components/Icon";
 import { CATALOGO_DESTINOS } from "../data/destinos";
+import "../styles/login.css";
 
 /** Credenciais públicas de teste do DummyJSON (mesmas do README). */
 const USUARIO_TESTE = "emilys";
@@ -13,6 +14,7 @@ const TOTAL_FOTOS = CATALOGO_DESTINOS.reduce(
   (total, destino) => total + (destino.fotos?.length ?? 0),
   0,
 );
+const TOTAL_CATEGORIAS = 8;
 
 export default function Login() {
   const { login, usuario } = useAuth();
@@ -23,6 +25,7 @@ export default function Login() {
   const [enviando, setEnviando] = useState(false);
   const [erro, setErro] = useState<string | null>(null);
   const botaoEntrarRef = useRef<HTMLButtonElement>(null);
+  const campoUsuarioRef = useRef<HTMLInputElement>(null);
 
   // Redirecionar se já estiver logado
   useEffect(() => {
@@ -30,6 +33,16 @@ export default function Login() {
       navigate("/", { replace: true });
     }
   }, [usuario, navigate]);
+
+  // Autofoco apenas com mouse: em telas de toque o teclado abriria
+  // sozinho e esconderia o formulário.
+  useEffect(() => {
+    const suportaHover =
+      typeof window.matchMedia === "function" &&
+      window.matchMedia("(hover: hover) and (pointer: fine)").matches;
+
+    if (suportaHover) campoUsuarioRef.current?.focus();
+  }, []);
 
   async function enviar(e: FormEvent) {
     e.preventDefault();
@@ -70,75 +83,83 @@ export default function Login() {
             <span className="login-brand-name">FlyNow</span>
           </div>
 
+          <p className="login-kicker">Minha Lista de Viagem</p>
+
           <h1 className="login-titulo" id="login-titulo">
             Entre na sua lista de viagem
           </h1>
           <p className="login-sub">
-            Monte a rota dos sonhos: {TOTAL_DESTINOS} destinos, {TOTAL_FOTOS} fotos e 8 categorias.
+            {TOTAL_DESTINOS} destinos, {TOTAL_FOTOS} fotos e {TOTAL_CATEGORIAS} categorias para
+            montar a sua rota.
           </p>
 
-          {erro && (
-            <p className="login-erro" role="alert" id="login-erro">
-              <Icon name="vazio" size={18} />
-              <span>{erro}</span>
-            </p>
-          )}
+          <div aria-live="polite">
+            {erro && (
+              <p className="login-erro" role="alert" id="login-erro">
+                <Icon name="vazio" size={18} />
+                <span>{erro}</span>
+              </p>
+            )}
+          </div>
 
-          <form onSubmit={enviar} noValidate>
+          <form className="login-form" onSubmit={enviar} noValidate>
             <div className="login-field">
-              <input
-                id="login-usuario"
-                name="username"
-                type="text"
-                value={username}
-                onChange={(e) => {
-                  setUsername(e.target.value);
-                  if (erro) setErro(null);
-                }}
-                placeholder=" "
-                autoComplete="username"
-                autoCapitalize="none"
-                spellCheck={false}
-                disabled={enviando}
-                aria-invalid={erro ? true : undefined}
-                aria-describedby={erro ? "login-erro" : undefined}
-              />
               <label htmlFor="login-usuario">Usuário</label>
+              <div className="login-input-wrap">
+                <input
+                  ref={campoUsuarioRef}
+                  id="login-usuario"
+                  name="username"
+                  type="text"
+                  value={username}
+                  onChange={(e) => {
+                    setUsername(e.target.value);
+                    if (erro) setErro(null);
+                  }}
+                  autoComplete="username"
+                  autoCapitalize="none"
+                  spellCheck={false}
+                  disabled={enviando}
+                  aria-invalid={erro ? true : undefined}
+                  aria-describedby={erro ? "login-erro" : undefined}
+                />
+              </div>
             </div>
 
             <div className="login-field login-field-senha">
-              <input
-                id="login-senha"
-                name="password"
-                type={mostrarSenha ? "text" : "password"}
-                value={senha}
-                onChange={(e) => {
-                  setSenha(e.target.value);
-                  if (erro) setErro(null);
-                }}
-                placeholder=" "
-                autoComplete="current-password"
-                disabled={enviando}
-                aria-invalid={erro ? true : undefined}
-                aria-describedby={erro ? "login-erro" : undefined}
-              />
               <label htmlFor="login-senha">Senha</label>
-              <button
-                type="button"
-                className="login-olho"
-                onClick={() => setMostrarSenha((visivel) => !visivel)}
-                aria-pressed={mostrarSenha}
-                aria-label={mostrarSenha ? "Ocultar senha" : "Mostrar senha"}
-                disabled={enviando}
-              >
-                <Icon name={mostrarSenha ? "eye-off" : "eye"} size={20} />
-              </button>
+              <div className="login-input-wrap">
+                <input
+                  id="login-senha"
+                  name="password"
+                  type={mostrarSenha ? "text" : "password"}
+                  value={senha}
+                  onChange={(e) => {
+                    setSenha(e.target.value);
+                    if (erro) setErro(null);
+                  }}
+                  autoComplete="current-password"
+                  disabled={enviando}
+                  aria-invalid={erro ? true : undefined}
+                  aria-describedby={erro ? "login-erro" : undefined}
+                />
+                <button
+                  type="button"
+                  className="login-olho"
+                  onClick={() => setMostrarSenha((visivel) => !visivel)}
+                  aria-pressed={mostrarSenha}
+                  aria-label={mostrarSenha ? "Ocultar senha" : "Mostrar senha"}
+                  disabled={enviando}
+                >
+                  <Icon name={mostrarSenha ? "eye-off" : "eye"} size={20} />
+                </button>
+              </div>
             </div>
 
             <button
               ref={botaoEntrarRef}
               type="submit"
-              className="btn btn-primary login-submit"
+              className="login-submit"
               disabled={enviando}
             >
               {enviando ? "Entrando..." : "Entrar"}
@@ -156,17 +177,28 @@ export default function Login() {
         </div>
       </section>
 
-      <aside className="login-foto" aria-hidden="true">
-        <div className="login-foto-texto">
-          <p className="login-foto-kicker">Minha Lista de Viagem</p>
-          <h2 className="login-foto-titulo">
-            {TOTAL_DESTINOS} destinos brasileiros,
+      <aside className="login-painel" aria-hidden="true">
+        <div className="login-painel-conteudo">
+          <p className="login-painel-kicker">Catálogo curado</p>
+          <h2 className="login-painel-titulo">
+            {TOTAL_DESTINOS} destinos brasileiros.
             <br />
             {TOTAL_FOTOS} fotos para sonhar.
           </h2>
-          <p className="login-foto-sub">
-            Natureza, praias, história e gastronomia — curate, salve e organize a sua rota.
-          </p>
+          <dl className="login-painel-stats">
+            <div>
+              <dt>Destinos</dt>
+              <dd>{TOTAL_DESTINOS}</dd>
+            </div>
+            <div>
+              <dt>Fotos</dt>
+              <dd>{TOTAL_FOTOS}</dd>
+            </div>
+            <div>
+              <dt>Categorias</dt>
+              <dd>{TOTAL_CATEGORIAS}</dd>
+            </div>
+          </dl>
         </div>
         <p className="login-foto-credito">
           <span className="credito-claro">

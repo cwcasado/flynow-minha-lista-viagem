@@ -1,6 +1,6 @@
 import { readFileSync } from "node:fs";
 
-const ARQUIVOS = ["src/styles/tokens.css", "src/index.css"];
+const ARQUIVOS = ["src/styles/tokens.css", "src/styles/login.css", "src/index.css"];
 
 const EXIGIDOS = [
   "--bg", "--bg-card", "--text", "--text-light", "--text-soft",
